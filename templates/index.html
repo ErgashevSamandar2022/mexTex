@@ -1,0 +1,251 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bosh.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/toplamJournal.css' %}" />
+<!-- section header start -->
+<section class="sectionHeader">
+	<div class="container">
+		<div class="header">
+			<div class="headerText">
+				<h2 class="subTitle">
+					{% trans "Namangan Davlat Texnika Universiteti" %}
+				</h2>
+				<h1 class="title">
+					{% trans "``Mexanika va Texnologiya`` Ilmiy Jurnali." %}
+				</h1>
+
+				<p class="lastTitle">
+					{% trans "Axborot OAK Rayosatining 01.02.2022 y, №311/6 qaroriga asosan asosiy ilmiy natijalarini chop"%}
+					{% trans "etish tavsiya etilgan ilmiy nashrlar ro'yxatiga kiritilgan." %}
+				</p>
+				<button type="button" class="headerBtn">{% trans "NamDTU.uz" %}</button>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section header end -->
+<!-- section admissionDays start -->
+<section class="section_admissionDays">
+	<div class="container">
+		<div class="admissionDays">
+			<div class="card">
+				<div class="time">
+					<i class="fa-regular fa-clock"></i>
+				</div>
+				<div>
+					<p>{% trans "Qabul kunlari:" %}</p>
+					<span>{% trans "Dushanba - Shanba: 08:00 - 18:00" %}</span>
+				</div>
+			</div>
+			<div class="card">
+				<div class="time">
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+				<div>
+					<p>{% trans "Manzil:" %}</p>
+					<span>{% trans "Namangan viloyati, Namangan shahri, Islom Karimov ko‘chasi, 12-uy" %}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section admissionDays end -->
+
+<!-- seciton journal start -->
+<section class="sectionJournal">
+	<div class="container">
+		<div class="journal">
+			<div class="sectionText">
+				<h2 class="title">{% trans "Ilmiy jurnal yo'nalishlari" %}</h2>
+				<h3 class="subTitle">
+					{% trans "Quyidagi yo‘nalishlar bo‘yicha maqolalar e'lon qilinadi" %}
+				</h3>
+			</div>
+			<div class="journalCards">
+				<div class="journalCard">
+					<div class="image">
+						<img src="{% static 'image/2.webp' %}" alt="Texnologiya" />
+					</div>
+					<div class="text">
+						<p>{% trans "Texnologiya" %}</p>
+					</div>
+				</div>
+				<div class="journalCard">
+					<div class="image">
+						<img src="{% static 'image/3.webp' %}" alt="Avtomobillar va qishloq xo‘jalik mashinalari" />
+					</div>
+					<div class="text">
+						<p>{% trans "Avtomobillar va qishloq xo‘jalik mashinalari" %}</p>
+					</div>
+				</div>
+				<div class="journalCard">
+					<div class="image">
+						<img src="{% static 'image/4.webp' %}" alt="Qisqa xabarlar" />
+					</div>
+					<div class="text">
+						<p>{% trans "Qisqa xabarlar" %}</p>
+					</div>
+				</div>
+				<div class="journalCard">
+					<div class="image">
+						<img src="{% static 'image/5.webp' %}" alt="Mexanika" />
+					</div>
+					<div class="text">
+						<p>{% trans "Mexanika" %}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- seciton journal end -->
+
+<!-- section language start -->
+<section class="sectionLanguage">
+	<div class="container">
+		<div class="language">
+			<div class="languagetext">
+				<div class="title">{% trans "Jurnal Nomi" %}</div>
+				<div class="languageCard">
+					<div class="num">1</div>
+					<div class="text">
+						<p>{% trans "O'zbek tilida" %}</p>
+						<span>{% trans "«Mexanika va texnologiya ilmiy jurnali»." %}</span>
+					</div>
+				</div>
+				<div class="languageCard">
+					<div class="num">2</div>
+					<div class="text">
+						<p>На русском</p>
+						<span>«Научный журнал механика и технология».</span>
+					</div>
+				</div>
+				<div class="languageCard">
+					<div class="num">3</div>
+					<div class="text">
+						<p>English</p>
+						<span>«Scientific Journal of Mechanics and Technology».</span>
+					</div>
+				</div>
+			</div>
+			<div class="languageImage">
+				<img src="{% static 'image/3jpg.webp' %}" alt="rasm jurnal" />
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section language end -->
+
+<!-- section journalElektron start -->
+<section class="sectionJournalElektron">
+	<div class="container">
+		<div class="journalElektron">
+			<div class="sectionText">
+				<h2 class="title">{% trans "Jurnallarning elektron nusxasi" %}</h2>
+				<h3 class="subTitle">{% trans "Mualliflik huquqi asosida" %}</h3>
+			</div>
+			<div class="journalElektronCards">
+				{% if articles %} {% for journal in articles %}
+				<div class="journalElektronCard">
+					<div class="image">
+						{% if journal.image %}
+						<img src="{{ journal.image.url }}" alt="Rasm" />
+						{% endif %}
+					</div>
+					<div class="text">
+						<div class="jNum">{{ journal.nashr_soni }}-SON</div>
+						<div class="data">
+							<i class="fa-regular fa-clock"></i>
+							<p>
+								<span class="span1">№{{ journal.num }}</span>
+								<span class="span2">({{ journal.num1 }}),</span>
+								<span class="span3">{{ journal.nashr_yili }}</span>
+							</p>
+						</div>
+						<h4 class="title">{{ journal.title }}</h4>
+						{% if journal.file %}
+						<a href="{{ journal.file.url }}" target="_blank" class="download">
+							<i class="fa-solid fa-file-arrow-down"></i>Yuklab olish
+						</a>
+						{% endif %}
+						<br />
+						{% if request.user.is_authenticated and request.user.is_superuser %}
+						<div class="UpDel">
+							<a href="{% url 'journal_edit' pk=journal.pk %}">Update</a>
+							<a href="{% url 'journal_delete' pk=journal.pk %}">Delete</a>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+				{% endfor %} {% else %}
+				<p>{% trans "Journal mavjud emas!" %}</p>
+				{% endif %}
+			</div>
+			<div class="journalElektronBtn">
+				<a href="{% url 'journals' %}">{% trans "Batafsil" %}</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section journalElektron end -->
+
+<!-- section count start -->
+<section class="sectionCount">
+	<div class="container">
+		<div class="countCards">
+			<div class="countCard">
+				<i class="fa-solid fa-crown"></i>
+				<div>
+					<h2 class="count" data-target="{{ yil_count }}">0</h2>
+					<p>{% trans "Yil" %}</p>
+				</div>
+			</div>
+			<div class="countCard">
+				<i class="fa-solid fa-briefcase"></i>
+				<div>
+					<h2 class="count" data-target="{{ oqituvchi_count }}">0</h2>
+					<p>{% trans "O'qituvchi" %}</p>
+				</div>
+			</div>
+			<div class="countCard">
+				<i class="fa-regular fa-pen-to-square"></i>
+				<div>
+					<h2 class="count" data-target="{{ jurnal_count }}">0</h2>
+					<p>{% trans "Jurnal" %}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section count end -->
+
+<!-- section galareya start -->
+<section class="sectionGalareya">
+	<div class="galareya">
+		<div class="card1 card">
+			<img src="{% static 'image/gal1.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card2 card">
+			<img src="{% static 'image/gal2.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card3 card">
+			<img src="{% static 'image/gal3.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card4 card">
+			<img src="{% static 'image/gal4.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card5 card">
+			<img src="{% static 'image/gal8.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card6 card">
+			<img src="{% static 'image/gal6.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card7 card">
+			<img src="{% static 'image/gal7.webp' %}" alt="galareya rasm" />
+		</div>
+		<div class="card8 card">
+			<img src="{% static 'image/gal5.webp' %}" alt="galareya rasm" />
+		</div>
+	</div>
+</section>
+<!-- section galareya end -->
+{% endblock content %}

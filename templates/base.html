@@ -1,0 +1,256 @@
+{% load static %} {% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mexanika va Texnalogiya</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/bosh.css' %}" />
+</head>
+
+<body>
+	<!-- navbar section start -->
+	<section class="sectionNav">
+		<div class="container">
+			<div class="navbar">
+				<div class="navLogo">
+					<img src="{% static 'image/logo1-removebg-preview.webp' %}" alt="logo" />
+				</div>
+				<ul class="navListItems">
+					<li class="listItem li">
+						<a class="itemA" href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a>
+					</li>
+					<li class="listItem li">
+						<a class="itemA" href="{% url 'about' %}">{% trans "Jurnal haqida" %}</a>
+					</li>
+					<li class="listItem li">
+						<a class="itemA" href="{% url 'journals' %}">{% trans "Jurnallar" %}</a>
+					</li>
+					<li class="listItem itemDrop li">
+						<a class="itemA" href="#">{% trans "Hujjatlar" %}</a>
+						<ul class="dropdown">
+							<li class="listDrop li">
+								<a href="{% static 'image/guvohnoma.jpg' %}" target="_blank">{% trans "Guvohnoma" %}
+								</a>
+							</li>
+							<li class="listDrop li">
+								<a href="{% static 'image/НамМКИ_журнал_NIZOMI_2025.pdf' %}" target="_blank">
+									{% trans "Jurnal nizomi" %}</a>
+							</li>
+							<li class="listDrop li">
+								<a href="#{% static 'image/Журнал_буйрук_17092020.pdf' %}" target="_blank">{% trans "Buyruq" %}</a>
+							</li>
+							<li class="listDrop li">
+								<a href="#{% static 'image/05.03.2022_ВАК_рухсати.pdf' %}" target="_blank">{% trans "VAK ruxsati" %}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="listItem li">
+						<a class="itemA" href="{% url 'arxiv' %}">{% trans "Arxiv" %}</a>
+					</li>
+					<li class="listItem li">
+						<a href="{% url 'boglanish' %}">{% trans "Bog'lanish" %}</a>
+					</li>
+					<li class="listItem li">
+						<a href="{% url 'maqola_yuborish' %}">{% trans "Maqola yuborish" %}</a>
+					</li>
+				</ul>
+				<div class="navLogin">
+					<div class="languageCard">
+						<form action="{% url 'set_language' %}" method="post">
+							{% csrf_token %}
+							<select name="language" onchange="this.form.submit()" class="">
+								{% if request.LANGUAGE_CODE == 'uz' %}
+								<option value="uz" selected>UZ</option>
+								{% else %}
+								<option value="uz">UZ</option>
+								{% endif %} {% if request.LANGUAGE_CODE == 'ru' %}
+								<option value="ru" selected>RU</option>
+								{% else %}
+								<option value="ru">RU</option>
+								{% endif %} {% if request.LANGUAGE_CODE == 'en' %}
+								<option value="en" selected>EN</option>
+								{% else %}
+								<option value="en">EN</option>
+								{% endif %}
+							</select>
+						</form>
+					</div>
+					<div class="messageRegular">
+						{% if request.user.is_authenticated %}
+						<a href="{% url 'journal_message' %}">
+							<i class="fa-regular fa-bell"></i>
+						</a>
+						{% endif %}
+					</div>
+					<div class="auth_container">
+						{% if user.is_authenticated %}
+						<div class="userDiv">
+							<p class="userBtnExit">
+								{% if user.username|length > 10 %}
+								{{ user.username|slice:":10" }}...
+								{% else %}
+								{{ user.username }}
+								{% endif %}
+							<div class="exit bnone">
+								<div class="admin">
+									{% if request.user.is_superuser %}
+									<div class="admin123-div">
+										<a href="{% url 'foydalanuvchilar' %}">
+											Users
+										</a>
+									</div>
+									{% endif %}
+
+									{% if request.user.is_approved %}
+									<div class="admin123-div">
+										<a href="{% url 'message' %}">
+											Maqola
+										</a>
+									</div>
+									{% endif %}
+
+									{% if request.user.is_superuser %}
+									<div class="admin123-div">
+										<a href="{% url 'tastiqMaqolalar_royxati' %}">
+											Tasdiq-Maqola
+										</a>
+									</div>
+									{% endif %}
+
+									{% if request.user.is_superuser %}
+									<div class="admin123-div">
+										<a href="{% url 'inbox' %}">
+											Message
+										</a>
+									</div>
+									{% endif %}
+
+									{% if request.user.is_superuser %}
+									<div class="admin123-div">
+										<a href="{% url 'contactMess' %}">
+											ContactMess
+										</a>
+									</div>
+									{% endif %}
+
+									{% if request.user.is_superuser %}
+									<div class="admin123-div">
+										<a href="{% url 'admin_maqola_jadval' %}" class="a">Ariza javoblar</a>
+									</div>
+									{% endif %}
+
+									{% if not request.user.is_superuser and request.user.role != 'user' %}
+									<div class="admin123-div">
+										<a href="{% url 'role_maqola_messages' %}" class="a">Ariza</a>
+									</div>
+									{% endif %}
+
+									{% if not request.user.is_superuser and not request.user.is_approved %}
+									<div class="admin123-div">
+										<a href="{% url 'my_articles' %}">
+											My articles
+										</a>
+									</div>
+									{% endif %}
+
+								</div>
+								<form action="{% url 'logout' %}" method="post" id="userFormExit" class="">
+									{% csrf_token %}
+									<button type="submit" class="submitbtn"><i class="fa-solid fa-right-from-bracket"></i>Chiqish</button>
+								</form>
+							</div>
+							</p>
+						</div>
+						{% else %}
+						<div class="ls">
+							<a href="{% url 'login' %}">{% trans "Kirish" %}</a>
+							<a href="{% url 'signup' %}">{% trans "Profil" %}</a>
+						</div>
+						{% endif %}
+					</div>
+					<div class="bars">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- navbar section end -->
+
+	{% block content %} {% endblock content %}
+
+	<!-- section footer start -->
+	<section class="sectionFooter">
+		<footer>
+			<div class="container">
+				<div class="footerCards">
+					<div class="card">
+						<div class="img">
+							<img src="{% static 'image/logo1-removebg-preview.webp' %}" alt="logo" />
+						</div>
+						<p>
+							{% trans "Namangan Davlat Texnika Universiteti «Mexanika va Texnologiya ilmiy jurnali»." %}
+						</p>
+					</div>
+					<div class="card">
+						<h3>{% trans "Foydali" %}</h3>
+						<ul class="footerListItems">
+							<li class="footerListItem">
+								<a href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a>
+							</li>
+							<li class="footerListItem">
+								<a href="{% url 'about' %}">{% trans "Jurnal haqida" %}</a>
+							</li>
+							<li class="footerListItem">
+								<a href="{% url 'journals' %}">{% trans "Jurnallar" %}</a>
+							</li>
+							<li class="footerListItem">
+								<a href="#" target="_blank" download="guvohnoma.jpg">{% trans "Guvohnoma" %}
+								</a>
+							</li>
+							<li class="footerListItem">
+								<a href="{% url 'boglanish' %}">{% trans "Bog'lanish" %}</a>
+							</li>
+						</ul>
+					</div>
+					<div class="card">
+						<h3>{% trans "Bog'lanish" %}</h3>
+						<div>
+							<i class="fa-solid fa-location-dot"></i>
+							<span>{% trans "Namangan viloyati, Namangan shahri, Islom Karimov ko‘chasi, 12-uy" %}</span>
+						</div>
+						<div>
+							<i class="fa-solid fa-phone"></i>
+							<span>{% trans "Тelefon:(69)2341523; (94)1590032 Faks:(69)2341523" %}</span>
+						</div>
+						<div>
+							<i class="fa-solid fa-envelope"></i>
+							<span>{% trans "Mex-tex@edu.uz" %}</span>
+						</div>
+						<div>
+							<i class="fa-regular fa-clock"></i>
+							<span>{% trans "Dushanba- Shanba, 08:00 - 18:00 PM" %}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<p>
+					{% trans "Copyright ©2025 Barcha huquqlar himoyalangan | Saytdan olingan ma`lumotlardan foydalanilganda" %}
+					{% trans "web-saytga havola qilish majburiy." %}
+					<i class="fa-solid fa-heart"></i>
+					<a href="https://namdtu.uz/" target="_blank">{% trans "NamDTU.uz" %}</a>
+				</p>
+			</div>
+		</footer>
+	</section>
+	<!-- section footer end -->
+
+	<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

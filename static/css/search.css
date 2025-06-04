@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.searchCards {
+	width: 100%;
+	text-align: center;
+	margin-top: 1rem;
+}
+.searchCards form input {
+	width: 250px;
+	height: 30px;
+	border: 0;
+	outline: 0;
+	border-radius: 15px;
+	padding-left: 15px;
+	box-shadow: 1px 1px 10px 1px gray;
+}
+.searchCards form button {
+	width: 30px;
+	height: 30px;
+	border: 0;
+	outline: 0;
+	background: transparent;
+}
+.searchCards form button i {
+	font-size: 1.3rem;
+	color: #123;
+}
+
+@media screen and (max-width: 390px) {
+	.searchCards form input {
+		width: 220px;
+	}
+}

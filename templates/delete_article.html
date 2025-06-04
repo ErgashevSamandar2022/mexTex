@@ -1,0 +1,4 @@
+<form method="POST" action="{% url 'delete_article' maqola.id %}">
+	{% csrf_token %}
+	<button type="submit">Maqolani o'chirish</button>
+</form>

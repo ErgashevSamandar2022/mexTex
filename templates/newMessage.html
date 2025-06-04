@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/foydalanuvchi.css' %}" />
+<div class="mess">
+	<h2>Xabar yuborish</h2>
+	<h3>Qabul qiluvchi: {{ maqola.foydalanuvchi.username }}</h3>
+	<form method="post">
+		{% csrf_token %} {{ form.as_p }}
+		<button type="submit">Yuborish</button>
+	</form>
+</div>
+{% endblock content %}

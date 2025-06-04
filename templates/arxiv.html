@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% load static %} {% load i18n %} {% block content %}
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/arxiv.css' %}" />
+</head>
+
+<!-- section header start -->
+<section class="section_header_arxiv">
+	<div class="container">
+		<div class="header">
+			<h1>{% trans "Barcha ilmiy jurnallar arxiv xolatda" %}</h1>
+		</div>
+	</div>
+</section>
+<!-- section header end -->
+
+<!-- section arxiv start -->
+<section class="section_arxiv">
+	<div class="container">
+		<div class="arxiv">
+			<div class="sectionText">
+				<h2 class="title">{% trans "Jurnallar arxivi" %}</h2>
+				<h3 class="subTitle">
+					{% trans "Jadvaldagi ma'lumotlar arxiv xolatda" %}
+				</h3>
+			</div>
+			<div class="arxivCards">
+				{% for year, articles in year_articles.items %}
+				<div class="card">
+					<h2 class="arxivYear">{{ year }}</h2>
+					<ul class="arxivList_items">
+						{% for article in articles %}
+						<li class="arxivList_item">
+							<p class="arxivText">
+								<span>{% trans "Nashr Soni:" %} </span>{{ article.nashr_soni }}
+							</p>
+							<p class="arxivText">
+								<span>{% trans "Nashr haqida:" %}</span>
+								№{{ article.num }}({{ article.num1 }}),{{ article.nashr_yili }}
+							</p>
+							<p>
+								<span>{% trans "Nashr fayli:" %}</span>
+								<a href="{{ article.file.url }}" target="_blank">Yuklash</a>
+							</p>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% empty %}
+				<p>{% trans "Arxivda ma'lumot mavjud emas." %}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section arxiv end -->
+
+{% endblock content %}

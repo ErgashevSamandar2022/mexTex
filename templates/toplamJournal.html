@@ -1,0 +1,111 @@
+{% extends "base.html" %} {% load static %} {% load i18n %} {% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/toplamjournal.css' %}" />
+
+<!-- section header start -->
+<section class="section_header">
+	<div class="container">
+		<div class="header">
+			<h1>{% trans "To'plam journallar" %}</h1>
+		</div>
+	</div>
+</section>
+<!-- section header end -->
+
+<!-- section admissionDays start -->
+<section class="section_admissionDays">
+	<div class="container">
+		<div class="admissionDays">
+			<div class="card">
+				<div class="time">
+					<i class="fa-regular fa-clock"></i>
+				</div>
+				<div>
+					<p>{% trans "Qabul kunlari:" %}</p>
+					<span>{% trans "Dushanba - Shanba: 08:00 - 18:00" %}</span>
+				</div>
+			</div>
+			<div class="card">
+				<div class="time">
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+				<div>
+					<p>{% trans "Manzil:" %}</p>
+					<span>{% trans "Namangan viloyati, Namangan shahri, Islom Karimov ko‘chasi, 12-uy" %}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section admissionDays end -->
+
+<!-- section journalElektron start -->
+<section class="sectionJournalElektron">
+	<div class="container">
+		<div class="journalElektron">
+			<div class="sectionText">
+				<h2 class="title">{% trans "Jurnallarning elektron nusxasi" %}</h2>
+				<h3 class="subTitle">{% trans "Mualliflik huquqi asosida" %}</h3>
+			</div>
+			<div class="formCards">
+				{% if request.user.is_authenticated %}
+				<form method="get" id="yearForm">
+					<select name="year" onchange="this.form.submit()" class="nashr_yili">
+						{% if selected_year|default:0 == 0 %}
+						<option value="0" selected>All</option>
+						{% else %}
+						<option value="0">All</option>
+						{% endif %} {% for year in years %} {% if selected_year == year %}
+						<option value="{{ year }}" selected>{{ year }}</option>
+						{% else %}
+						<option value="{{ year }}">{{ year }}</option>
+						{% endif %} {% endfor %}
+					</select>
+				</form>
+				{% endif %}
+
+				{% if request.user.is_authenticated and request.user.is_superuser %}
+				<div class="cardCreate">
+					<a href="{% url 'journal_create' %}">+ADD</a>
+				</div>
+				{% endif %}
+			</div>
+			<div class="journalElektronCards">
+				{% if articles %} {% for journal in articles %}
+				<div class="journalElektronCard">
+					<div class="image">
+						{% if journal.image %}
+						<img src="{{ journal.image.url }}" alt="Rasm" />
+						{% endif %}
+					</div>
+					<div class="text">
+						<div class="jNum">{{ journal.nashr_soni }}-SON</div>
+						<div class="data">
+							<i class="fa-regular fa-clock"></i>
+							<p>
+								<span class="span1">№{{ journal.num }}</span>
+								<span class="span2">({{ journal.num1 }}),</span>
+								<span class="span3">{{ journal.nashr_yili }}</span>
+							</p>
+						</div>
+						<h4 class="title">{{ journal.title }}</h4>
+						{% if journal.file %}
+						<a href="{{ journal.file.url }}" target="_blank" class="download"><i
+								class="fa-solid fa-file-arrow-down"></i>Yuklab olish</a>
+						{% if request.user.is_authenticated and request.user.is_superuser %}
+						<div class="UpDel">
+							<a href="{% url 'journal_edit' pk=journal.pk %}">Update</a>
+							<a href="{% url 'journal_delete' pk=journal.pk %}">Delete</a>
+						</div>
+						{% endif %} {% endif %}
+					</div>
+				</div>
+				{% endfor %} {% else %}
+				<p></p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section journalElektron end -->
+{% endblock content %}

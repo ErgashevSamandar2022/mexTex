@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rochester&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.section_header,
+.section_header_konfrensiya {
+	width: 100%;
+	min-height: 100vh;
+	padding: 2rem 0;
+	text-align: center;
+}
+.section_header {
+	background: url(../image/header4.webp) no-repeat center/cover;
+}
+/* konfrensiya */
+.section_header_konfrensiya {
+	background: url(../image/hed3.webp) no-repeat center/cover;
+}
+.section_header .header,
+.section_header_konfrensiya .header {
+	min-height: calc(100vh - 4rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.3rem;
+	color: rgb(85, 252, 2);
+}
+/* journalElektron styling start */
+.sectionJournalElektron {
+	padding: 3rem 0;
+	width: 100%;
+	/* background: #123; */
+	background: linear-gradient(
+		45deg,
+		rgba(40, 113, 228, 1) 0%,
+		rgba(23, 255, 167, 1) 100%
+	);
+}
+.sectionJournalElektron .journalElektronCards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	gap: 2rem;
+}
+.sectionJournalElektron .journalElektronCards .journalElektronCard {
+	width: 250px;
+	background: #fff;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.sectionJournalElektron .journalElektronCard .image {
+	width: 250px;
+	height: 350px;
+	object-fit: cover;
+}
+.sectionJournalElektron .journalElektronCard .image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.sectionJournalElektron .journalElektronCard .text {
+	width: 250px;
+	height: calc(100% - 350px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 10px 10px 1.5rem 10px;
+	color: #fff;
+	background: gray;
+}
+.sectionJournalElektron .journalElektronCard .text .jNum {
+	padding: 0.7rem 1.4rem;
+	background: chocolate;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+.sectionJournalElektron .journalElektronCard .text .data {
+	display: flex;
+	color: #fff;
+}
+.sectionJournalElektron .journalElektronCard .text i {
+	margin-right: 5px;
+}
+.sectionJournalElektron .journalElektronCard .text .title {
+	font-size: 1.3rem;
+	color: crimson;
+	margin: 0.5rem 0 1rem;
+}
+.sectionJournalElektron .journalElektronCard .text .download {
+	text-decoration: none;
+	background: green;
+	padding: 0.8rem 1.3rem;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.formCards {
+	max-width: 1440px;
+	width: 80%;
+	display: flex;
+	gap: 1.2rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.formCards form {
+	width: 100%;
+}
+.formCards form .nashr_yili {
+	width: 110px;
+	height: 30px;
+	text-align: center;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+}
+.cardCreate a {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	background: green;
+	margin-left: 1.5rem;
+	border-radius: 7px;
+	color: #fff;
+}
+
+.UpDel {
+	margin-top: 1rem;
+}
+.UpDel a {
+	text-decoration: none;
+	margin: 1rem 5px;
+}
+.UpDel a:first-child {
+	color: blue;
+}
+.UpDel a:last-child {
+	color: red;
+}
+/* journalElektron styling end */
+
+@media screen and (max-width: 992px) {
+	.section_header .header,
+	.section_header_konfrensiya .header {
+		font-size: 3rem;
+	}
+}
+@media screen and (max-width: 768px) {
+	.section_header .header,
+	.section_header_konfrensiya .header {
+		font-size: 2.5rem;
+	}
+}
+@media screen and (max-width: 576px) {
+	.section_header .header,
+	.section_header_konfrensiya .header {
+		font-size: 2.2rem;
+	}
+}
+@media screen and (max-width: 390px) {
+	.section_header .header,
+	.section_header_konfrensiya .header {
+		font-size: 1.5rem;
+	}
+}
+@media screen and (max-width: 300px) {
+	.section_header .header,
+	.section_header_konfrensiya .header {
+		font-size: 1.3rem;
+	}
+}

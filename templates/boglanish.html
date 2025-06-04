@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% load static %} {% load i18n %} {% block content %}
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/boglanish.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/addUpDel.css' %}" />
+</head>
+
+<!-- section header start -->
+<section class="section_header">
+	<div class="container">
+		<div class="header">
+			<h1>{% trans "Biz bilan bog'lanish" %}</h1>
+		</div>
+	</div>
+</section>
+<!-- section header end -->
+
+<!-- section admissionDays start -->
+<section class="section_admissionDays">
+	<div class="container">
+		<div class="admissionDays">
+			<div class="card">
+				<div class="time">
+					<i class="fa-regular fa-clock"></i>
+				</div>
+				<div>
+					<p>{% trans "Qabul kunlari:" %}</p>
+					<span>{% trans "Dushanba - Shanba: 08:00 - 18:00" %}</span>
+				</div>
+			</div>
+			<div class="card">
+				<div class="time">
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+				<div>
+					<p>{% trans "Manzil:" %}</p>
+					<span>{% trans "Namangan viloyati, Namangan shahri, Islom Karimov
+						ko‘chasi, 12-uy" %}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section admissionDays end -->
+
+<!-- section contact start -->
+<section class="section_contact">
+	<div class="container">
+		<div class="contactCards">
+			<div class="location">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1265.897302138162!2d71.63023736822409!3d41.0071342761691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4b4e4d08cbb5%3A0x4846bdb82817ac1e!2zTmFtYW5nYW4gbXVoYW5kaXNsaWstcXVyaWxpc2ggaW5zdGl0dXRpIDItYmlubywg0J3QsNC80LDQvdCz0LDQvQ!5e0!3m2!1sru!2s!4v1738572289574!5m2!1sru!2s"
+					style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="sectionText">
+				<h2 class="title">{% trans "Xabar qoldirish" %}</h2>
+				<h3 class="subTitle">
+					{% trans "Biz bilan bog'laning yoki jurnalni yuborish uchun xabar qoldiring." %}
+				</h3>
+			</div>
+			{% if request.user.is_authenticated %}
+			<form method="post">
+				{% csrf_token %} {{ form.as_p }}
+				<button type="submit">Yuborish</button>
+			</form>
+			{% else %}
+			<p>
+				⚠️ {% trans "Iltimos," %}
+				<a href="{% url 'login' %}">{% trans "saytga kiring" %}</a>, {% trans
+				"keyin xabar yuborishingiz mumkin." %}
+			</p>
+			{% endif %}
+		</div>
+	</div>
+</section>
+<!-- section contact end -->
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+<div class="appMessage">
+	<div class="card">
+		<h2>Arizani yuborish: <strong>{{ maqola }}</strong> </h2>
+		<div class="container">
+			<form method="post">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button type="submit">Yuborish</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock content %}

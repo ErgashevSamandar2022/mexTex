@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rochester&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto;
+}
+.sectionNav {
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	position: fixed;
+	z-index: 900;
+}
+.container {
+	max-width: 1440px;
+	width: 90%;
+	margin: 0 auto;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+}
+.navbar .navLogo {
+	width: 80px;
+}
+.navbar .navLogo img {
+	width: 100%;
+}
+.navbar .navListItems {
+	display: flex;
+}
+.navbar .navListItems .listItem {
+	list-style: none;
+	margin: 0 1rem;
+	position: relative;
+	/* line-height: 78px; */
+}
+.navbar .navListItems .listItem a {
+	text-decoration: none;
+	color: crimson;
+	font-size: 1.2rem;
+	font-family: Quicksand;
+	font-weight: 800;
+}
+.bag {
+	color: #123 !important;
+}
+.dropdown {
+	display: none;
+}
+.navbar .navListItems .listItem:hover .dropdown {
+	display: block;
+	position: absolute;
+	left: -100%;
+	background: #fff;
+	width: 280px;
+	list-style: none;
+}
+.navbar .navListItems .listItem:hover .dropdown .listDrop {
+	margin: 10px;
+	padding: 5px 10px;
+	line-height: 23px;
+}
+.navbar .navListItems .listItem:hover .dropdown .listDrop:hover {
+	background: #123;
+}
+.navbar .navLogin {
+	display: flex;
+	align-items: center;
+}
+.navbar .navLogin button {
+	margin: 0 5px;
+	border: 0;
+	outline: 0;
+	background: green;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+.navbar .navLogin .bars {
+	display: none;
+	font-size: 1.5rem;
+	align-items: center;
+	margin-left: 10px;
+}
+/* admissionDays styling start */
+.section_admissionDays {
+	padding: 3rem 0;
+	background: #123;
+}
+.admissionDays {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 1.2rem;
+}
+.admissionDays .card {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	color: #fff;
+	width: 45%;
+}
+.admissionDays .card .time {
+	min-width: 50px;
+	min-height: 50px;
+	border: 1px solid gray;
+	text-align: center;
+	align-content: center;
+	font-size: 1.2rem;
+	rotate: 45deg;
+	border-radius: 2px;
+}
+.admissionDays .card .time i {
+	rotate: -45deg;
+}
+.admissionDays .card div p {
+	font-size: 1.3rem;
+	margin-bottom: 5px;
+}
+/* admissionDays styling end */
+
+.dbNone {
+	display: none;
+}
+.dbBlock {
+	display: block;
+}
+.dfFlex {
+	display: flex;
+}
+/* login styling end */
+
+/* sectionText */
+.sectionText {
+	margin: 1rem 0;
+	text-align: center;
+	padding: 0 0.5rem;
+}
+.sectionText .title {
+	font-size: 2.5rem;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+.sectionText .subTitle {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: #123;
+	font-weight: 400;
+	letter-spacing: 1.1px;
+}
+
+/* footer stylin start */
+.sectionFooter {
+	width: 100%;
+	background: #123;
+}
+.footerCards {
+	padding: 4rem 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr 2.5fr;
+	gap: 1rem;
+}
+.footerCards .card {
+	padding: 1rem;
+}
+.footerCards .card .img img {
+	width: 150px;
+}
+.footerCards .card p {
+	color: gray;
+	line-height: 25px;
+	font-size: 1.2rem;
+}
+.footerCards .card h3 {
+	color: #fff;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+}
+.footerCards .card .footerListItems {
+	list-style: none;
+	margin-left: 1.5rem;
+}
+.footerCards .card .footerListItems .footerListItem {
+	margin: 1rem 0;
+	font-size: 1rem;
+}
+.footerCards .card .footerListItems .footerListItem a {
+	text-decoration: none;
+	color: #fff;
+}
+.footerCards .card .footerListItems .footerListItem a:hover {
+	color: crimson;
+}
+.footerCards .card div {
+	font-size: 1.05rem;
+	margin-bottom: 1rem;
+	color: #fff;
+}
+.footerCards .card div i {
+	font-size: 1.3rem;
+	margin-right: 10px;
+}
+footer .copy {
+	text-align: center;
+	color: gray;
+	border-top: 1px solid gray;
+	padding: 2.5rem 1.5rem;
+}
+footer .copy p i {
+	color: red;
+	margin: 0 5px;
+}
+footer .copy p a {
+	text-decoration: none;
+	color: #fff;
+}
+/* footer stylin end */
+
+@media only screen and (max-width: 1400px) {
+	.navbar .navListItems {
+		display: none;
+	}
+	.navbar .navLogin .bars {
+		display: block;
+	}
+
+	.navbar .navListItems.active {
+		position: absolute;
+		top: 80px;
+		left: -100%;
+		display: flex;
+		flex-direction: column;
+		background: #123;
+		width: 50%;
+		overflow-y: auto;
+		height: calc(100vh - 80px);
+		z-index: 900;
+	}
+	.navbar .navListItems.active.acLeft {
+		left: 0;
+	}
+	.navbar .navListItems.active .listItem {
+		list-style: none;
+		margin: 1rem;
+		background: #fff;
+		line-height: 23px;
+		padding: 0.5rem 1rem;
+		border-radius: 5px;
+	}
+	.navbar .navListItems.active .listItem a {
+		text-decoration: none;
+		color: crimson;
+		font-size: 1.2rem;
+		font-family: Quicksand;
+		font-weight: 800;
+	}
+	.navbar .navListItems.active .itemDrop.dropActiv .dropdown {
+		display: block !important;
+		background: #fff;
+		width: 100%;
+		list-style: none;
+		position: relative;
+		left: 0;
+	}
+	.navbar .navListItems.active .itemDrop.dropActiv .dropdown .listDrop {
+		margin: 10px;
+		padding: 5px 10px;
+	}
+	/* .navbar .navListItems.active .itemDrop.dropActiv .dropdown .listDrop:hover {
+		background: #123;
+		color: #fff;
+	} */
+}
+@media only screen and (max-width: 768px) {
+	.navbar .navListItems.active {
+		width: 75%;
+	}
+
+	/* ---------------- */
+	.sectionText .title {
+		font-size: 2.4rem;
+	}
+	/* footer */
+	.footerCards {
+		grid-template-columns: 2fr 1fr;
+		flex-wrap: wrap;
+	}
+
+	/* .admissionDays */
+	.admissionDays {
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+	.admissionDays .card {
+		width: 100%;
+	}
+
+	/* ----------------- */
+	.navbar .navLogin button {
+		padding: 7px 15px;
+		border-radius: 5px;
+		font-size: 1.1rem;
+		cursor: pointer;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.navbar .navListItems.active {
+		width: 100%;
+	}
+
+	/* ---------------- */
+	.sectionText .title {
+		font-size: 2.1rem;
+	}
+
+	/* footer */
+	.footerCards {
+		grid-template-columns: 1fr;
+		flex-wrap: wrap;
+		/* text-align: center; */
+	}
+	.footerCards .card .img,
+	.footerCards .card p {
+		text-align: center;
+	}
+	.footerCards .card:nth-child(2) {
+		margin: 0 auto;
+	}
+	.footerCards .card div {
+		font-size: 0.9rem;
+	}
+	.footerCards .card div i {
+		font-size: 1rem;
+	}
+	.footerCards .card h3 {
+		font-size: 1.2rem;
+	}
+
+	/* ------------------------------ */
+	.admissionDays .card .time {
+		min-width: 40px;
+		min-height: 40px;
+		font-size: 0.9rem;
+	}
+	.admissionDays .card div p {
+		font-size: 1rem;
+	}
+	.admissionDays .card div span {
+		font-size: 0.8rem;
+	}
+}
+@media only screen and (max-width: 390px) {
+	.sectionLogin .login {
+		width: 260px;
+	}
+
+	/* ---------------- */
+	.sectionText .title {
+		font-size: 1.85rem;
+	}
+
+	/* --------------- */
+	.admissionDays .card {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 300px) {
+}

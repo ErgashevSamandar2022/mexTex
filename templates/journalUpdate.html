@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/addUpDel.css' %}">
+
+<div class="updateCard">
+	<div class="container">
+		<h1 class="title">Tahrirlash</h1>
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit" class="udcBtn">Saqlash</button>
+		</form>
+	</div>
+</div>
+{% endblock content %}

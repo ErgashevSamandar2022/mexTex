@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %} {% block title %} Ro'yhatdan o'tish
+{% endblock title %} {% block content %}
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+</head>
+<div class="signUp_Container">
+	<h1 class="title">Ro'yhatdan o'tish</h1>
+	<form action="" method="post">
+		{% csrf_token %} {{form.as_p}} {% if form.errors %}
+		<div style="color: red; font-size: 14px">
+			<ul>
+				{% for field, errors in form.errors.items %} {% for error in errors %}
+				<li>{{ error }}</li>
+				{% endfor %} {% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+		<button type="submit">Yuborish</button>
+	</form>
+</div>
+{% endblock content %}

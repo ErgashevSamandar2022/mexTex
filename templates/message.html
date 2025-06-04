@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/foydalanuvchi.css' %}" />
+<link rel="stylesheet" href="{% static 'css/search.css' %}" />
+<div class="message">
+	<h2>Yuborilgan Maqolalar Ro'yxati</h2>
+	<!-- <div class="searchCards">
+		<form method="get" class="mb-3">
+			<input type="text" name="q" value="{{ q }}" placeholder="Qidiruv..." class="form-control" />
+			<button type="submit" class="btn btn-primary mt-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+		</form>  
+	</div> -->
+	<table class="user-table">
+		<thead>
+			<tr>
+				<th>Muallif</th>
+				<th>Sarlavha</th>
+				<th>Kategoriya</th>
+				<th>Kalit so‘zlar</th>
+				<th>Tel number</th>
+				<th>Fayl</th>
+				<th>Yaratilgan sana</th>
+				<th class="amallar">Amallar</th>
+				<th class="holat">Holat</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for m in maqolalar %}
+			<tr>
+				<td>{{ m.muallif }}</td>
+				<td>{{ m.sarlavha }}</td>
+				<td>{{ m.kategoriya }}</td>
+				<td>{{ m.kalit_sozlar }}</td>
+				<td>{{ m.telefon_raqam }}</td>
+				<td>
+					{% if m.fayl %}
+					<a href="{{ m.fayl.url }}" download class="btn btn-sm btn-success">Yuklab olish</a>
+					{% else %}
+					<span class="text-muted">Yo'q</span>
+					{% endif %}
+				</td>
+				<td>{{ m.yaratilgan_sana|date:"d.m.Y H:i" }}</td>
+				<td class="amallar">
+					<a href="{% url 'delete_article' m.id %}" class="btn btn-sm btn-danger">Delete</a>
+					<a href="{% url 'send_message' m.pk %}" class="btn btn-primary">Message</a>
+					<a href="{% url 'send_taqriz' m.pk %}">send</a>
+				</td>
+				<td>
+					{% if m.status == 'tekshirilmoqda' %}
+					<a href="{% url 'maqola_tasdiqlash' m.id %}" class="tastiqlandi">Tastiqlash</a>
+					<a href="{% url 'maqola_rad_etish' m.id %}" class="radetildi">Rad etish</a>
+					{% elif m.status == 'tasdiqlandi' %}
+					<span class="tastiqlandi">Tastiqlandi</span>
+					{% elif m.status == 'rad_etildi' %}
+					<span class="radetildi">Rad etildi</span>
+					{% endif %}
+				</td>
+			</tr>
+			{% empty %}
+			<tr>
+				<td colspan="8" class="text-center py-4">
+					<div class="alert alert-info">
+						Hozircha hech qanday maqola yuborilmagan
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock content %}

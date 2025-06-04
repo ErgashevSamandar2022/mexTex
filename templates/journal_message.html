@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/foydalanuvchi.css' %}" />
+<div class="jurnalMessageUser">
+	<h2>Menga yuborilgan xabarlar</h2>
+	<div class="messageUser">
+		{% for msg in messages %}
+		<div class="card">
+			<div class="cardTittle">
+				<h3><span>Tahrirchi:</span> {{ msg.from_user.first_name }}</h3>
+			</div>
+			<div class="cardBody">
+				<p>{{ msg.message }}</p>
+			</div>
+			<div class="cardFooter">
+				<em>{{ msg.created_at }}</em>
+			</div>
+		</div>
+		{% empty %}
+		<p>Sizga hali hech qanday xabar yuborilmagan.</p>
+		{% endfor %}
+	</div>
+</div>
+{% endblock content %}

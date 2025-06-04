@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-23 14:25+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\blog\views.py:11
+msgid "Welcome to our website!"
+msgstr ""
+
+#: .\mexTex\settings.py:112
+msgid "English"
+msgstr ""
+
+#: .\mexTex\settings.py:113
+msgid "O'zbek"
+msgstr ""
+
+#: .\mexTex\settings.py:114
+msgid "Русский"
+msgstr ""
+
+#: .\templates\base.html:25 .\templates\base.html:110
+msgid "Bosh sahifa"
+msgstr "Bosh sahifa"
+
+#: .\templates\base.html:28 .\templates\base.html:113
+msgid "Jurnal haqida"
+msgstr "Jurnal haqida"
+
+#: .\templates\base.html:31
+msgid "Jurnallar"
+msgstr "Jurnallar"
+
+#: .\templates\base.html:34
+msgid "Hujjatlar"
+msgstr "Hujjatlar"
+
+#: .\templates\base.html:119
+msgid "Guvohnoma"
+msgstr "Guvohnoma"
+
+msgid "Jurnal nizomi"
+msgstr "Jurnal nizomi"
+
+msgid "Buyruq"
+msgstr "Buyruq"
+
+msgid "VAK ruxsati"
+msgstr "VAK ruxsati"
+
+msgid "Kirish"
+msgstr "Kirish"
+
+msgid "Profil"
+msgstr "Profil"
+
+msgid "Arxiv"
+msgstr "Arxiv"
+
+msgid "Bog'lanish"
+msgstr "Bog'lanish"
+
+msgid "Xabarlar"
+msgstr "Xabarlar"
+
+msgid "Maqola yuborish"
+msgstr "Maqola yuborish"
+
+msgid "Namangan Davlat Texnika Universiteti «Mexanika va Texnologiya ilmiy jurnali»."
+msgstr "Namangan Davlat Texnika Universiteti «Mexanika va Texnologiya ilmiy jurnali»."
+
+msgid "Foydali"
+msgstr "Foydali"
+
+msgid "Namangan viloyati, Namangan shahri, Islom Karimov ko‘chasi, 12-uy"
+msgstr "Namangan viloyati, Namangan shahri, Islom Karimov ko‘chasi, 12-uy"	
+
+msgid "Тelefon:(69)2341523; (94)1590032 Faks:(69)2341523"
+msgstr "Тelefon:(69)2341523; (94)1590032 Faks:(69)2341523"
+
+msgid "Dushanba- Shanba, 08:00 - 18:00 PM"
+msgstr "Dushanba- Shanba, 08:00 - 18:00 PM"
+
+msgid "Copyright ©2025 Barcha huquqlar himoyalangan | Saytdan olingan ma`lumotlardan foydalanilganda"
+msgstr "Copyright ©2025 Barcha huquqlar himoyalangan | Saytdan olingan ma`lumotlardan foydalanilganda"
+
+msgid "web-saytga havola qilish majburiy."
+msgstr "web-saytga havola qilish majburiy."
+
+msgid "NamDTU.uz"
+msgstr "NamDTU.uz"
+
+msgid "Namangan Davlat Texnika Universiteti"
+msgstr "Namangan Davlat Texnika Universiteti"
+
+msgid "``Mexanika va Texnologiya`` Ilmiy Jurnali."
+msgstr "``Mexanika va Texnologiya`` Ilmiy Jurnali."
+
+msgid "Axborot OAK Rayosatining 01.02.2022 y, №311/6 qaroriga asosan asosiy ilmiy natijalarini chop"
+msgstr "Axborot OAK Rayosatining 01.02.2022 y, №311/6 qaroriga asosan asosiy ilmiy natijalarini chop"
+
+msgid "etish tavsiya etilgan ilmiy nashrlar ro'yxatiga kiritilgan."
+msgstr "etish tavsiya etilgan ilmiy nashrlar ro'yxatiga kiritilgan."
+
+msgid "Qabul kunlari:"
+msgstr "Qabul kunlari:"
+
+msgid "Dushanba - Shanba: 08:00 - 18:00"
+msgstr "Dushanba - Shanba: 08:00 - 18:00"
+
+msgid "Manzil:"
+msgstr "Manzil:"
+
+msgid "Ilmiy jurnal yo'nalishlari"
+msgstr "Ilmiy jurnal yo'nalishlari"
+
+msgid "Quyidagi yo‘nalishlar bo‘yicha maqolalar e'lon qilinadi"
+msgstr "Quyidagi yo‘nalishlar bo‘yicha maqolalar e'lon qilinadi"
+
+msgid "Texnologiya"
+msgstr "Texnologiya"
+
+msgid "Avtomobillar va qishloq xo‘jalik mashinalari"
+msgstr "Avtomobillar va qishloq xo‘jalik mashinalari"
+
+msgid "Qisqa xabarlar"
+msgstr "Qisqa xabarlar"
+
+msgid "Mexanika"
+msgstr "Mexanika"
+
+msgid "Jurnal Nomi"
+msgstr "Jurnal Nomi"
+
+msgid "Jurnallarning elektron nusxasi"
+msgstr "Jurnallarning elektron nusxasi"
+
+msgid "Mualliflik huquqi asosida"
+msgstr "Mualliflik huquqi asosida"
+
+msgid "Journal mavjud emas!"
+msgstr "Journal mavjud emas!"
+
+msgid "Batafsil"
+msgstr "Batafsil"
+
+msgid "Yil"
+msgstr "Yil"
+
+msgid "O'qituvchi"
+msgstr "O'qituvchi"
+
+msgid "O'quvchi"
+msgstr "O'quvchi"
+
+msgid "Jurnal"
+msgstr "Jurnal"
+
+
+
+msgid "MEXANIKA VA TEXNOLOGIYA"
+msgstr "MEXANIKA VA TEXNOLOGIYA"
+
+msgid "Ilmiy jurnalida maqolalarni chop etish uchun rasmiylashtirishga qo‘yiladigan talablar"
+msgstr "Ilmiy jurnalida maqolalarni chop etish uchun rasmiylashtirishga qo‘yiladigan talablar"
+
+msgid "Mexanika va texnologiya ilmiy jurnali"
+msgstr "Mexanika va texnologiya ilmiy jurnali"
+
+msgid "Namangan Davlat Texnika Universiteti «Mexanika va texnologiyailmiy jurnali» («Научный"
+msgstr "Namangan Davlat Texnika Universiteti «Mexanika va texnologiyailmiy jurnali» («Научный"
+
+msgid "журнал механика и технология», «Scientific Journal of Mechanics and Technology») da"
+msgstr "журнал механика и технология», «Scientific Journal of Mechanics and Technology») da"
+
+msgid "respublikamizning oliy ta'lim va ilmiy-tadqiqot institutlari, ilmiy-ishlab chiqarish"
+msgstr "respublikamizning oliy ta'lim va ilmiy-tadqiqot institutlari, ilmiy-ishlab chiqarish"
+
+msgid "markazlari va xorijda bajarilgan ilmiy ahamiyatga molik ilmiy-tadqiqot ishlarining natijalari"
+msgstr "markazlari va xorijda bajarilgan ilmiy ahamiyatga molik ilmiy-tadqiqot ishlarining natijalari"
+
+msgid "nashr etiladi. Ilmiy jurnal bir yilda to‘rt marta chop etilib, unda quyidagi yo‘nalishlar"
+msgstr "nashr etiladi. Ilmiy jurnal bir yilda to‘rt marta chop etilib, unda quyidagi yo‘nalishlar"
+
+msgid "bo‘yicha maqolalar e'lon qilinadi:."
+msgstr "bo‘yicha maqolalar e'lon qilinadi:."
+
+msgid "- mexanika;"
+msgstr "- mexanika;"
+
+msgid "- avtomobilllar va qishloq xo‘jalik mashinalari;"
+msgstr "- avtomobilllar va qishloq xo‘jalik mashinalari;"
+
+msgid "- texnologiya;"
+msgstr "- texnologiya;"
+
+msgid "- qisqa xabarlar."
+msgstr "- qisqa xabarlar."
+
+msgid "Tahririyatga taqdim etilayotgan maqola"
+msgstr "Tahririyatga taqdim etilayotgan maqola"
+
+msgid "Tahririyatga taqdim etilayotgan maqola qo‘lyozmasi bo‘yicha muallif"
+msgstr "Tahririyatga taqdim etilayotgan maqola qo‘lyozmasi bo‘yicha muallif"
+
+msgid "faoliyat olib borayotgan muassasa rahbariyati tomonidan imzolangan yo‘llanma xati, maqolani"
+msgstr "faoliyat olib borayotgan muassasa rahbariyati tomonidan imzolangan yo‘llanma xati, maqolani"
+
+msgid "chop etish mumkinligi haqidagi ekspert xulosasi va maqola mualliflarining tarkibida fan"
+msgstr "chop etish mumkinligi haqidagi ekspert xulosasi va maqola mualliflarining tarkibida fan"
+
+msgid "doktori: bo‘lmagan taqdirda tegishli fan yo‘nalishi bo‘yicha fan doktorining rasmiy taqrizi"
+msgstr "doktori: bo‘lmagan taqdirda tegishli fan yo‘nalishi bo‘yicha fan doktorining rasmiy taqrizi"
+
+msgid "bo‘lishi shart. Maqolalar o‘zbek, rus yoki ingliz tillarida taqdim etilishi mumkin. Maqolaning"
+msgstr "bo‘lishi shart. Maqolalar o‘zbek, rus yoki ingliz tillarida taqdim etilishi mumkin. Maqolaning"
+
+msgid "nomi, qisqacha annotatsiyasi (8-10 qator) va kalit so‘zlar (10-15 ta) o‘zbek, rus va ingliz"
+msgstr "nomi, qisqacha annotatsiyasi (8-10 qator) va kalit so‘zlar (10-15 ta) o‘zbek, rus va ingliz"
+
+msgid "tillarida beriladi."
+msgstr "tillarida beriladi."
+
+msgid "Maqola matni shakillantirish."
+msgstr "Maqola matni shakillantirish."
+
+msgid "Maqola matni “MS Word” dasturida “Times New Roman” shiriftida 12 pt o‘lchamda, hajmi 1"
+msgstr "Maqola matni “MS Word” dasturida “Times New Roman” shiriftida 12 pt o‘lchamda, hajmi 1"
+
+msgid "intervalda 6-10 bet bo‘lishi kerak. Varaq o‘lchami 210x297 mm (A4-format), matn chegara"
+msgstr "intervalda 6-10 bet bo‘lishi kerak. Varaq o‘lchami 210x297 mm (A4-format), matn chegara"
+
+msgid "o‘lchamlari yuqoridan va pastdan– 2,0 sm, chapdan – 3,0 sm, o‘ngdan – 1,5 sm bo‘lishi lozim."
+msgstr "o‘lchamlari yuqoridan va pastdan– 2,0 sm, chapdan – 3,0 sm, o‘ngdan – 1,5 sm bo‘lishi lozim."
+
+msgid "Maqolani rasmiylashtirish qoidalari"
+msgstr "Maqolani rasmiylashtirish qoidalari"
+
+msgid "Maqolani rasmiylashtirish qoidalari quyidagilardan iborat. Maqola boshining chap tomonida UO‘T"
+msgstr "Maqolani rasmiylashtirish qoidalari quyidagilardan iborat. Maqola boshining chap tomonida UO‘T"
+
+msgid "(UDK), keyingi qatorda maqolaning nomi o‘zbek, rus va ingliz tillarida (bosh harflarda,"
+msgstr "(UDK), keyingi qatorda maqolaning nomi o‘zbek, rus va ingliz tillarida (bosh harflarda,"
+
+msgid "o‘rtada, qalin yozuvda (jirnûy)), undan keyingi qatorda mualliflar to‘g‘risidagi ma'lumotlar"
+msgstr "o‘rtada, qalin yozuvda (jirnûy)), undan keyingi qatorda mualliflar to‘g‘risidagi ma'lumotlar"
+
+msgid "(familiyasi, ismi, otasining ismi, ish joyi, lavozimi, ilmiy darajasi va unvoni, elektron"
+msgstr "(familiyasi, ismi, otasining ismi, ish joyi, lavozimi, ilmiy darajasi va unvoni, elektron"
+
+msgid "manzili hamda telefon raqamlari) o‘zbek, rus va ingliz tillarida kichik bosma harflarda"
+msgstr "manzili hamda telefon raqamlari) o‘zbek, rus va ingliz tillarida kichik bosma harflarda"
+
+msgid "yoziladi, qisqacha annotatsiyasi (8-10 qator) va kalit so‘zlar (10-15 ta) o‘zbek, rus va"
+msgstr "yoziladi, qisqacha annotatsiyasi (8-10 qator) va kalit so‘zlar (10-15 ta) o‘zbek, rus va"
+
+msgid "ingliz tillarida beriladi. Bir qatordan so‘ng maqola matni yoziladi. Maqoladagi formulalar"
+msgstr "ingliz tillarida beriladi. Bir qatordan so‘ng maqola matni yoziladi. Maqoladagi formulalar"
+
+msgid "Microsoft Equation da yoziladi. Rasm (grafik, sxema va chizma)lar standart qoidalarga rioya"
+msgstr "Microsoft Equation da yoziladi. Rasm (grafik, sxema va chizma)lar standart qoidalarga rioya"
+
+msgid "qilingan holda 10x10 sm dan katta bo‘lmagan o‘lchamda tayyorlanishi, ularni soni 5 tagacha,"
+msgstr "qilingan holda 10x10 sm dan katta bo‘lmagan o‘lchamda tayyorlanishi, ularni soni 5 tagacha,"
+
+msgid "qisqa xabarlarda esa 2 tagacha ruxsat etiladi. Nomlari esa rasmdan so‘ng qalin yozuvda"
+msgstr "qisqa xabarlarda esa 2 tagacha ruxsat etiladi. Nomlari esa rasmdan so‘ng qalin yozuvda"
+
+msgid "o‘rtada yoziladi (1-rasm. Nomi). Jadvallarning nomlari javalning yuqori qismida qalin yozuvda"
+msgstr "o‘rtada yoziladi (1-rasm. Nomi). Jadvallarning nomlari javalning yuqori qismida qalin yozuvda"
+
+msgid "o‘rtada yoziladi (1-jadval. Nomi). Adabiyotlarga havolalar maqola ichida [1] ko‘rinishda"
+msgstr "o‘rtada yoziladi (1-jadval. Nomi). Adabiyotlarga havolalar maqola ichida [1] ko‘rinishda"
+
+msgid "bo‘lib, foydalanilgan adabiyotlar maqola oxirida havolalar ketma-ketligi tartibida beriladi."
+msgstr "bo‘lib, foydalanilgan adabiyotlar maqola oxirida havolalar ketma-ketligi tartibida beriladi."
+
+msgid "Adabiyotlar ro‘yxati shakillantirish."
+msgstr "Adabiyotlar ro‘yxati shakillantirish."
+
+msgid "Adabiyotlar ro‘yxatida quyidagilar ko‘rsatiladi: jurnalda chop etilgan maqolalar va ma'ruza"
+msgstr "Adabiyotlar ro‘yxatida quyidagilar ko‘rsatiladi: jurnalda chop etilgan maqolalar va ma'ruza"
+
+msgid "tezislari uchun - Mualliflarning familiyasi, ismi sharifi. Maqolaning nomi // Jurnalning nomi"
+msgstr "tezislari uchun - Mualliflarning familiyasi, ismi sharifi. Maqolaning nomi // Jurnalning nomi"
+
+msgid ". – Nashr joyi va yili. – Soni yoki qismi. – Betlari. (1. Turdaliev V.M., Maxkamov G‘.U."
+msgstr ". – Nashr joyi va yili. – Soni yoki qismi. – Betlari. (1. Turdaliev V.M., Maxkamov G‘.U."
+
+msgid "Piyoz ekish"
+msgstr "Piyoz ekish"
+
+msgid "texnologiyasini tanlash bo‘yicha tajribaviy tadqiqotlar // Namangan muhandislik-texnologiya"
+msgstr "texnologiyasini tanlash bo‘yicha tajribaviy tadqiqotlar // Namangan muhandislik-texnologiya"
+
+msgid "instituti ilmiy-texnika jurnali. – Namangan, 2019. – ¹3. – B. 77-81.); monografiyalar uchun -"
+msgstr "instituti ilmiy-texnika jurnali. – Namangan, 2019. – ¹3. – B. 77-81.); monografiyalar uchun -"
+
+msgid "Mualliflarning familiyasi, ismi sharifi. Nomi. – Nashriyot nomi, joyi va nashr yili. – Betlar"
+msgstr "Mualliflarning familiyasi, ismi sharifi. Nomi. – Nashriyot nomi, joyi va nashr yili. – Betlar"
+
+msgid "soni. (1). Djuraev A., Maqsudov R.X., Turdaliev V.M. O‘zgaruvchan uzatish nisbatli tasmali"
+msgstr "soni. (1). Djuraev A., Maqsudov R.X., Turdaliev V.M. O‘zgaruvchan uzatish nisbatli tasmali"
+
+msgid "uzatmalarni kinematik va dinamik tahlili. – Fan va texnologiyalara: Toshkent, 2013. – 168 b.);"
+msgstr "uzatmalarni kinematik va dinamik tahlili. – Fan va texnologiyalara: Toshkent, 2013. – 168 b.);"
+
+msgid "avtoreferatlar uchun - Muallifning familiyasi, ismi sharifi. Mavzusi: ishning darajasi. –"
+msgstr "avtoreferatlar uchun - Muallifning familiyasi, ismi sharifi. Mavzusi: ishning darajasi. –"
+
+msgid "Nashr joyi va yili. – Betlar soni. (1. Turdaliev V.M. Tuproqqa ishlov beradigan va sabzavot"
+msgstr "Nashr joyi va yili. – Betlar soni. (1. Turdaliev V.M. Tuproqqa ishlov beradigan va sabzavot"
+
+msgid "ekinlarini ekadigan kombinatsiyalashgan mashinani ishlab chiqishning ilmiy-texnik yechimlari:"
+msgstr "ekinlarini ekadigan kombinatsiyalashgan mashinani ishlab chiqishning ilmiy-texnik yechimlari:"
+
+msgid "Texn. fan. dok. diss. avtoref. – Toshkent, 2018. – 64 b.); dissertatsiya uchun - Muallifning"
+msgstr "Texn. fan. dok. diss. avtoref. – Toshkent, 2018. – 64 b.); dissertatsiya uchun - Muallifning"
+
+msgid "familiyasi, ismi sharifi. Mavzusi: ishning darajasi. – Nashr joyi va yili. – Betlar soni. (1."
+msgstr "familiyasi, ismi sharifi. Mavzusi: ishning darajasi. – Nashr joyi va yili. – Betlar soni. (1."
+
+msgid "Turdaliev V.M. Tuproqqa ishlov beradigan va sabzavot ekinlarini ekadigan kombinatsiyalashgan"
+msgstr "Turdaliev V.M. Tuproqqa ishlov beradigan va sabzavot ekinlarini ekadigan kombinatsiyalashgan"
+
+msgid "mashinani ishlab chiqishning ilmiy-texnik yechimlari: Texn. fan. dok. diss. –Toshkent, 2018.–"
+msgstr "mashinani ishlab chiqishning ilmiy-texnik yechimlari: Texn. fan. dok. diss. –Toshkent, 2018.–"
+
+msgid "200 b.); kitoblar uchun - mualliflarning familiyasi, ismi sharifi, kitobning nomi, nashr joyi,"
+msgstr "200 b.); kitoblar uchun - mualliflarning familiyasi, ismi sharifi, kitobning nomi, nashr joyi,"
+
+msgid "nashriyot nomi, nashr yili, qismi va betlari (1. Jo‘raev A., Mavlyaviev M., Abdukarimov T.,"
+msgstr "nashriyot nomi, nashr yili, qismi va betlari (1. Jo‘raev A., Mavlyaviev M., Abdukarimov T.,"
+
+msgid "Miraxmedov D. Mexanizm va mashinalar nazariyasi. : G‘.G‘ulom, 2004. – 592 b.); patent uchun –"
+msgstr "Miraxmedov D. Mexanizm va mashinalar nazariyasi. : G‘.G‘ulom, 2004. – 592 b.); patent uchun –"
+
+msgid "Patent olingan davlat va uning raqami / e'lon qilingan yil. Mualliflarning familiyasi, ismi"
+msgstr "Patent olingan davlat va uning raqami / e'lon qilingan yil. Mualliflarning familiyasi, ismi"
+
+msgid "sharifi. Mavzusi // Patent raqami, nashr yili. – Byulleten raqami. (1. Patent O‘zR FAP 00848 /"
+msgstr "sharifi. Mavzusi // Patent raqami, nashr yili. – Byulleten raqami. (1. Patent O‘zR FAP 00848 /"
+
+msgid "31.10.2013. Djuraev A., To‘xtaqo‘ziev A., Muxamedov J., Mamaxanov A. Zanjirli uzatma //"
+msgstr "31.10.2013. Djuraev A., To‘xtaqo‘ziev A., Muxamedov J., Mamaxanov A. Zanjirli uzatma //"
+
+msgid "O‘zbekiston Respublikasi patenti, 2013. – Byul. ¹10.); internet ma'lumotlari uchun - URL,"
+msgstr "O‘zbekiston Respublikasi patenti, 2013. – Byul. ¹10.); internet ma'lumotlari uchun - URL,"
+
+msgid "ma'lumotga murojaat etilgan sana. (1. ZiyoNet ta'lim portali. http://library.ziyonet.uz/ru."
+msgstr "ma'lumotga murojaat etilgan sana. (1. ZiyoNet ta'lim portali. http://library.ziyonet.uz/ru."
+
+msgid "20.05.2020.)"
+msgstr "20.05.2020.)"
+
+msgid "Tahririyat"
+msgstr "Tahririyat"
+
+msgid "Tahririyat barcha maqolalarni taqrizga yuboradi, ushbu taqriz natijalari asosida maqolani chop"
+msgstr "Tahririyat barcha maqolalarni taqrizga yuboradi, ushbu taqriz natijalari asosida maqolani chop"
+
+msgid "etish masalasi bo‘yicha tegishli qaror qabul qiladi."
+msgstr "etish masalasi bo‘yicha tegishli qaror qabul qiladi."
+
+msgid "Maqolalarni qabul qilinmaslik shartlari."
+msgstr "Maqolalarni qabul qilinmaslik shartlari."
+
+msgid "Yuqoridagi talablarga javob bermaydigan maqolalar tahririyat tomonidan ko‘rib chiqilmaydi."
+msgstr "Yuqoridagi talablarga javob bermaydigan maqolalar tahririyat tomonidan ko‘rib chiqilmaydi."
+
+msgid "Keltirilgan talablar"
+msgstr "Keltirilgan talablar"
+
+msgid "Keltirilgan talablar yakuniy emas, ba'zi maqolalar borasida tahririyat qo‘shimcha ma'lumot"
+msgstr "Keltirilgan talablar yakuniy emas, ba'zi maqolalar borasida tahririyat qo‘shimcha ma'lumot"
+
+msgid "so‘rash huquqini saqlaydi"
+msgstr "so‘rash huquqini saqlaydi"
+
+msgid "Qadrli Namangan Davlat Texnika Universiteti 'Mexanika va texnologiya' ilmiy jurnali tahririyati!"
+msgstr "Qadrli Namangan Davlat Texnika Universiteti 'Mexanika va texnologiya' ilmiy jurnali tahririyati!"
+
+msgid "Ishonchim komilki, universitetimizda o‘z faoliyatini boshlayotgan 'Mexanika va texnologiya'"
+msgstr "Ishonchim komilki, universitetimizda o‘z faoliyatini boshlayotgan 'Mexanika va texnologiya'"
+
+msgid "ilmiy jurnali bugungi kunda mamlakatimiz ilmiy salohiyatining yuksalishida alohida ahamiyat kasb"
+msgstr "ilmiy jurnali bugungi kunda mamlakatimiz ilmiy salohiyatining yuksalishida alohida ahamiyat kasb"
+
+msgid "etadi. Jurnalning har bir sonida respublikamizda amalga oshirilayotgan keng ko‘lamli"
+msgstr "etadi. Jurnalning har bir sonida respublikamizda amalga oshirilayotgan keng ko‘lamli"
+
+msgid "islohotlarga javoban, professor-o‘qituvchilar hamda yosh tadqiqotchilarning ilm-fan taraqqiyoti"
+msgstr "islohotlarga javoban, professor-o‘qituvchilar hamda yosh tadqiqotchilarning ilm-fan taraqqiyoti"
+
+msgid "yo‘lida olib borayotgan ilmiy izlanishlari o‘z aksini topadi. Qolaversa, ushbu jurnal"
+msgstr "yo‘lida olib borayotgan ilmiy izlanishlari o‘z aksini topadi. Qolaversa, ushbu jurnal"
+
+msgid "takrorlanmas professional va ilmiy muhitni yanada rivojlantirishga xizmat qiladi. Shubhasiz,"
+msgstr "takrorlanmas professional va ilmiy muhitni yanada rivojlantirishga xizmat qiladi. Shubhasiz,"
+
+msgid "ilmiy izlanishlar va uning yechimlarini topishda o‘z oldiga oliy maqsadlar qo‘yib"
+msgstr "ilmiy izlanishlar va uning yechimlarini topishda o‘z oldiga oliy maqsadlar qo‘yib"
+
+msgid "harakatlanayotgan ilm-fan jonkuyarlari mehnatlari sahifalarda bitilib, o‘z muxlislari qalbidan"
+msgstr "harakatlanayotgan ilm-fan jonkuyarlari mehnatlari sahifalarda bitilib, o‘z muxlislari qalbidan"
+
+msgid "o‘rin topadi."
+msgstr "o‘rin topadi."
+
+msgid "SH.T.Ergashev"
+msgstr "SH.T.Ergashev"
+
+msgid "Institut rektori"
+msgstr "Institut rektori"
+
+msgid "Tahrir hayati"
+msgstr "Tahrir hayati"
+
+msgid "MEXANIKA VA TEXNOLOGIYA ILMIY JURNALINING"
+msgstr "MEXANIKA VA TEXNOLOGIYA ILMIY JURNALINING"
+
+msgid "Bosh muharrir"
+msgstr "Bosh muharrir"
+
+msgid "Bosh muharrir o‘rinbosari"
+msgstr "Bosh muharrir o‘rinbosari"
+
+msgid "Mas'ul kotib"
+msgstr "Mas'ul kotib"
+
+msgid "Texnik muharrir"
+msgstr "Texnik muharrir"
+
+msgid "To'plam journallar"
+msgstr "To'plam journallar"
+
+msgid "Barcha ilmiy jurnallar arxiv xolatda"
+msgstr "Barcha ilmiy jurnallar arxiv xolatda"
+
+msgid "Jurnallar arxivi"
+msgstr "Jurnallar arxivi"
+
+msgid "Jadvaldagi ma'lumotlar arxiv xolatda"
+msgstr "Jadvaldagi ma'lumotlar arxiv xolatda"
+
+msgid "Arxivda ma'lumot mavjud emas."
+msgstr "Arxivda ma'lumot mavjud emas."
+
+msgid "Biz bilan bog'lanish"
+msgstr "Biz bilan bog'lanish"
+
+msgid "Xabar qoldirish"
+msgstr "Xabar qoldirish"
+
+msgid "Biz bilan bog'laning yoki jurnalni yuborish uchun xabar qoldiring."
+msgstr "Biz bilan bog'laning yoki jurnalni yuborish uchun xabar qoldiring."
+
+msgid "Iltimos,"
+msgstr "Iltimos,"
+
+msgid "saytga kiring"
+msgstr "saytga kiring"
+
+msgid "keyin xabar yuborishingiz mumkin."
+msgstr "keyin xabar yuborishingiz mumkin."
+
+msgid "Nashr Soni:"
+msgstr "Nashr Soni:"
+
+msgid "Nashr haqida:"
+msgstr "Nashr haqida:"
+
+msgid "Nashr fayli:"
+msgstr "Nashr fayli:"

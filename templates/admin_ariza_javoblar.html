@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+<div class="ariza_javob">
+	<div class="cards">
+		<h2>Javob berilgan arizalar ro'yxati</h2>
+		<div class="card">
+			{% for ish_nomi, loglar in guruhlangan.items %}
+			<h3>{{ ish_nomi }}</h3>
+			<table class="user-table">
+				<thead>
+					<tr>
+						<th>Maqola</th>
+						<th>Kim javob bergan</th>
+						<th>Javob</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for log in loglar %}
+					<tr>
+						<td>{{ log.maqola }}</td>
+						<td>{{ log.kimga}}</td>
+						<td>{% if log.holat %}
+							✅ Qabul qilindi
+							{% else %}
+							❌ Rad etildi
+							{% endif %}</td>
+						<td>
+							<form method="post" action="{% url 'javob_ochirish' log.id %}" style="display:inline;">
+								{% csrf_token %}
+								<button type="submit" class="delete-button"
+									onclick="return confirm('Haqiqatan ham o‘chirmoqchimisiz?');">🗑️ O‘chirish</button>
+							</form>
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<br>
+			{% empty %}
+			<p>Hozircha hech qanday javob berilgan ariza yo‘q.</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}

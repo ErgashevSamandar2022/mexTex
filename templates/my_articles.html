@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/foydalanuvchi.css' %}" />
+<link rel="stylesheet" href="{% static 'css/search.css' %}" />
+<div class="message">
+	<h2>Mening maqolalarim</h2>
+	<div class="searchCards">
+		<form method="get" class="mb-3">
+			<input type="text" name="q" value="{{ q }}" placeholder="Qidiruv..." class="form-control" />
+			<button type="submit" class="btn btn-primary mt-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+		</form>
+	</div>
+	<table class="user-table">
+		<thead>
+			<tr>
+				<th>Muallif</th>
+				<th>Sarlavha</th>
+				<th>Kategoriya</th>
+				<th>Kalit so‘zlar</th>
+				<th>Tel number</th>
+				<th>Fayl</th>
+				<th>Tasdiqlangan sana</th>
+				<th>Holat</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for maqola in articles %}
+			<tr>
+				<td>{{ maqola.muallif }}</td>
+				<td>{{ maqola.sarlavha }}</td>
+				<td>{{ maqola.kategoriya }}</td>
+				<td>{{ maqola.kalit_sozlar }}</td>
+				<td>{{ maqola.telefon_raqam }}</td>
+				<td>
+					{% if maqola.fayl %}
+					<a href="{{ maqola.fayl.url }}" download class="btn btn-sm btn-success">Yuklab olish</a>
+					{% else %}
+					<span class="text-muted">Yo'q</span>
+					{% endif %}
+				</td>
+				<td>{{ maqola.yaratilgan_sana|date:"d.m.Y H:i" }}</td>
+				<td>{{ maqola.get_status_display }}</td>
+			</tr>
+			{% empty %}
+			<tr>
+				<td colspan="8" class="text-center py-4">
+					<div class="alert alert-info">
+						Hozircha hech qanday maqola yuborilmagan
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock content %}

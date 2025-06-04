@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/addUpDel.css' %}" />
+
+<div class="sectionMaqola">
+	<h2 class="title">Maqola Yuborish</h2>
+
+	{% if success %}
+	<div class="alert alert-success" style="text-align: center; margin: 1rem 0">
+		✅ Maqola muvaffaqiyatli yuborildi!
+	</div>
+	{% endif %}
+
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %} {{ form.as_p }}
+		<button type="submit" class="btn btn-primary">Yuborish</button>
+	</form>
+</div>
+{% endblock content %}

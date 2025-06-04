@@ -1,0 +1,314 @@
+{% extends "base.html" %} {% load static %} {% load i18n %} {% block content %}
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+</head>
+
+<!-- section header start -->
+<section class="section_header">
+	<div class="container">
+		<div class="header"></div>
+	</div>
+</section>
+<!-- section header end -->
+
+<!-- section admissionDays start -->
+<section class="section_admissionDays">
+	<div class="container">
+		<div class="admissionDays">
+			<div class="card">
+				<div class="time">
+					<i class="fa-regular fa-clock"></i>
+				</div>
+				<div>
+					<p>{% trans "Qabul kunlari:" %}</p>
+					<span>{% trans "Dushanba - Shanba: 08:00 - 18:00" %}</span>
+				</div>
+			</div>
+			<div class="card">
+				<div class="time">
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+				<div>
+					<p>{% trans "Manzil:" %}</p>
+					<span>{% trans "Namangan viloyati, Namangan shahri, Islom Karimovko‘chasi, 12-uy" %}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section admissionDays end -->
+
+<!-- section about start -->
+<section class="section_about">
+	<div class="container">
+		<div class="about">
+			<div class="sectionText">
+				<h2 class="title">{% trans "MEXANIKA VA TEXNOLOGIYA" %}</h2>
+				<h3 class="subTitle">
+					{% trans "Ilmiy jurnalida maqolalarni chop etish uchun rasmiylashtirishga qo‘yiladigan talablar" %}
+				</h3>
+			</div>
+			<div class="aboutCards">
+				<div class="aboutCard">
+					<img src="{% static 'image/010203.webp' %}" alt="jurnal rasm" />
+				</div>
+				<div class="aboutCard">
+					<img src="{% static 'image/jur.webp' %}" alt="jurnal image" />
+				</div>
+			</div>
+			<div class="aboutAccardion">
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p>
+							<span>1</span>{% trans "Mexanika va texnologiya ilmiy jurnali" %}
+						</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Namangan Davlat Texnika Universiteti «Mexanika va texnologiyailmiy jurnali» («Научный" %}
+						{% trans "журнал механика и технология», «Scientific Journal of Mechanics and Technology») da" %}
+						{% trans "respublikamizning oliy ta'lim va ilmiy-tadqiqot institutlari, ilmiy-ishlab chiqarish" %}
+						{% trans "markazlari va xorijda bajarilgan ilmiy ahamiyatga molik ilmiy-tadqiqot ishlarining natijalari" %}
+						{% trans "nashr etiladi. Ilmiy jurnal bir yilda to‘rt marta chop etilib, unda quyidagi yo‘nalishlar" %}
+						{% trans "bo‘yicha maqolalar e'lon qilinadi:." %}
+						<p>{% trans "- mexanika;" %}</p>
+						<p>
+							{% trans "- avtomobilllar va qishloq xo‘jalik mashinalari;" %}
+						</p>
+						<p>{% trans "- texnologiya;" %}</p>
+						<p>{% trans "- qisqa xabarlar." %}</p>
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p>
+							<span>2</span>{% trans "Tahririyatga taqdim etilayotgan maqola" %}
+						</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Tahririyatga taqdim etilayotgan maqola qo‘lyozmasi bo‘yicha muallif" %}
+						{% trans "faoliyat olib borayotgan muassasa rahbariyati tomonidan imzolangan yo‘llanma xati, maqolani" %}
+						{% trans "chop etish mumkinligi haqidagi ekspert xulosasi va maqola mualliflarining tarkibida fan" %}
+						{% trans "doktori: bo‘lmagan taqdirda tegishli fan yo‘nalishi bo‘yicha fan doktorining rasmiy taqrizi" %}
+						{% trans "bo‘lishi shart. Maqolalar o‘zbek, rus yoki ingliz tillarida taqdim etilishi mumkin. Maqolaning" %}
+						{% trans "nomi, qisqacha annotatsiyasi (8-10 qator) va kalit so‘zlar (10-15 ta) o‘zbek, rus va ingliz" %}
+						{% trans "tillarida beriladi."%}
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p><span>3</span>{% trans "Maqola matni shakillantirish." %}</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Maqola matni “MS Word” dasturida “Times New Roman” shiriftida 12 pt o‘lchamda, hajmi 1" %}
+						{% trans "intervalda 6-10 bet bo‘lishi kerak. Varaq o‘lchami 210x297 mm (A4-format), matn chegara" %}
+						{% trans "o‘lchamlari yuqoridan va pastdan– 2,0 sm, chapdan – 3,0 sm, o‘ngdan – 1,5 sm bo‘lishi lozim." %}
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p>
+							<span>4</span>{% trans "Maqolani rasmiylashtirish qoidalari" %}
+						</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Maqolani rasmiylashtirish qoidalari quyidagilardan iborat. Maqola boshining chap tomonida UO‘T" %}
+						{% trans "(UDK), keyingi qatorda maqolaning nomi o‘zbek, rus va ingliz tillarida (bosh harflarda," %}
+						{% trans "o‘rtada, qalin yozuvda (jirnûy)), undan keyingi qatorda mualliflar to‘g‘risidagi ma'lumotlar" %}
+						{% trans "(familiyasi, ismi, otasining ismi, ish joyi, lavozimi, ilmiydarajasi va unvoni, elektron" %}
+						{% trans "manzili hamda telefon raqamlari) o‘zbek, rus va ingliz tillarida kichik bosma harflarda" %}
+						{% trans "yoziladi, qisqacha annotatsiyasi (8-10 qator) va kalit so‘zlar (10-15 ta) o‘zbek, rus va" %}
+						{% trans "ingliz tillarida beriladi. Bir qatordan so‘ng maqola matni yoziladi. Maqoladagi formulalar" %}
+						{% trans "Microsoft Equation da yoziladi. Rasm (grafik, sxema va chizma)lar standart qoidalarga rioya" %}
+						{% trans "qilingan holda 10x10 sm dan katta bo‘lmagan o‘lchamda tayyorlanishi, ularni soni 5 tagacha," %}
+						{% trans "qisqa xabarlarda esa 2 tagacha ruxsat etiladi. Nomlari esa rasmdan so‘ng qalin yozuvda" %}
+						{% trans "o‘rtada yoziladi (1-rasm. Nomi). Jadvallarning nomlari javalning yuqori qismida qalin yozuvda" %}
+						{% trans "o‘rtada yoziladi (1-jadval. Nomi). Adabiyotlarga havolalar maqola ichida [1] ko‘rinishda" %}
+						{% trans "bo‘lib, foydalanilgan adabiyotlar maqola oxirida havolalar ketma-ketligi tartibida beriladi." %}
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p>
+							<span>5</span>{% trans "Adabiyotlar ro‘yxati shakillantirish." %}
+						</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Adabiyotlar ro‘yxatida quyidagilar ko‘rsatiladi: jurnalda chop etilgan maqolalar va ma'ruza" %}
+						{% trans "tezislari uchun - Mualliflarning familiyasi, ismi sharifi. Maqolaning nomi // Jurnalning nomi" %}
+						{% trans ". - Nashr joyi va yili. – Soni yoki qismi. – Betlari. (1. Turdaliev V.M., Maxkamov G‘.U." %}
+						{% trans "Piyoz ekish" %}
+						{% trans "texnologiyasini tanlash bo‘yicha tajribaviy tadqiqotlar // Namangan muhandislik-texnologiya" %}
+						{% trans "instituti ilmiy-texnika jurnali. – Namangan, 2019. – ¹3. – B. 77-81.); monografiyalar uchun -" %}
+						{% trans "Mualliflarning familiyasi, ismi sharifi. Nomi. – Nashriyot nomi, joyi va nashr yili. – Betlar" %}
+						{% trans "soni. (1). Djuraev A., Maqsudov R.X., Turdaliev V.M. O‘zgaruvchan uzatish nisbatli tasmali" %}
+						{% trans "uzatmalarni kinematik va dinamik tahlili. – Fan va texnologiyalara: Toshkent, 2013. – 168 b.);" %}
+						{% trans "avtoreferatlar uchun - Muallifning familiyasi, ismi sharifi. Mavzusi: ishning darajasi. –" %}
+						{% trans "Nashr joyi va yili. – Betlar soni. (1. Turdaliev V.M. Tuproqqa ishlov beradigan va sabzavot" %}
+						{% trans "ekinlarini ekadigan kombinatsiyalashgan mashinani ishlab chiqishning ilmiy-texnik yechimlari:" %}
+						{% trans "Texn. fan. dok. diss. avtoref. – Toshkent, 2018. – 64 b.); dissertatsiya uchun - Muallifning" %}
+						{% trans "familiyasi, ismi sharifi. Mavzusi: ishning darajasi. – Nashr joyi va yili. – Betlar soni. (1." %}
+						{% trans "Turdaliev V.M. Tuproqqa ishlov beradigan va sabzavot ekinlarini ekadigan kombinatsiyalashgan" %}
+						{% trans "mashinani ishlab chiqishning ilmiy-texnik yechimlari: Texn. fan. dok. diss. –Toshkent, 2018.–" %}
+						{% trans "200 b.); kitoblar uchun - mualliflarning familiyasi, ismi sharifi, kitobning nomi, nashr joyi," %}
+						{% trans "nashriyot nomi, nashr yili, qismi va betlari (1. Jo‘raev A., Mavlyaviev M., Abdukarimov T.," %}
+						{% trans "Miraxmedov D. Mexanizm va mashinalar nazariyasi. : G‘.G‘ulom, 2004. – 592 b.); patent uchun –" %}
+						{% trans "Patent olingan davlat va uning raqami / e'lon qilingan yil. Mualliflarning familiyasi, ismi" %}
+						{% trans "sharifi. Mavzusi // Patent raqami, nashr yili. – Byulleten raqami. (1. Patent O‘zR FAP 00848 /" %}
+						{% trans "31.10.2013. Djuraev A., To‘xtaqo‘ziev A., Muxamedov J., Mamaxanov A. Zanjirli uzatma //" %}
+						{% trans "O‘zbekiston Respublikasi patenti, 2013. – Byul. ¹10.); internet ma'lumotlari uchun - URL," %}
+						{% trans "ma'lumotga murojaat etilgan sana. (1. ZiyoNet ta'lim portali. http://library.ziyonet.uz/ru." %}
+						{% trans "20.05.2020.)" %}
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p><span>6</span>{% trans "Tahririyat" %}</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Tahririyat barcha maqolalarni taqrizga yuboradi, ushbu taqriz natijalari asosida maqolani chop" %}
+						{% trans "etish masalasi bo‘yicha tegishli qaror qabul qiladi." %}
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p>
+							<span>7</span>{% trans "Maqolalarni qabul qilinmaslik shartlari." %}
+						</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Yuqoridagi talablarga javob bermaydigan maqolalar tahririyat tomonidan ko‘rib chiqilmaydi." %}
+					</div>
+				</div>
+				<div class="accardionCard">
+					<button type="button" class="accardion">
+						<p><span>8</span>{% trans "Keltirilgan talablar" %}</p>
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<div class="panel aboutNone">
+						{% trans "Keltirilgan talablar yakuniy emas, ba'zi maqolalar borasida tahririyat qo‘shimcha ma'lumot" %}
+						{% trans "so‘rash huquqini saqlaydi" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section about end -->
+
+<!-- section rec start -->
+<section class="section_rec">
+	<div class="container">
+		<div class="recCards">
+			<div class="recImage">
+				<img src="{% static 'image/rec.webp' %}" alt="" />
+			</div>
+			<div class="recText">
+				<p>
+					{% trans "Qadrli Namangan Davlat Texnika Universiteti 'Mexanika va texnologiya' ilmiy jurnali tahririyati!" %}
+					{% trans "Ishonchim komilki, universitetimizda o‘z faoliyatini boshlayotgan 'Mexanika va texnologiya'" %}
+					{% trans "ilmiy jurnali bugungi kunda mamlakatimiz ilmiy salohiyatining yuksalishida alohida ahamiyat kasb" %}
+					{% trans "etadi. Jurnalning har bir sonida respublikamizda amalga oshirilayotgan keng ko‘lamli" %}
+					{% trans "islohotlarga javoban, professor-o‘qituvchilar hamda yosh tadqiqotchilarning ilm-fan taraqqiyoti" %}
+					{% trans "yo‘lida olib borayotgan ilmiy izlanishlari o‘z aksini topadi. Qolaversa, ushbu jurnal" %}
+					{% trans "takrorlanmas professional va ilmiy muhitni yanada rivojlantirishga xizmat qiladi. Shubhasiz," %}
+					{% trans "ilmiy izlanishlar va uning yechimlarini topishda o‘z oldiga oliy maqsadlar qo‘yib" %}
+					{% trans "harakatlanayotgan ilm-fan jonkuyarlari mehnatlari sahifalarda bitilib, o‘z muxlislari qalbidan" %}
+					{% trans "o‘rin topadi." %}
+				</p>
+				<h4 class="title">{% trans "SH.T.Ergashev" %}</h4>
+				<span class="lavozim">{% trans "Institut rektori" %}</span>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section res end -->
+
+<!-- section editCard start -->
+<section class="section_edit">
+	<div class="container">
+		<div class="edit">
+			<div class="sectionText">
+				<h2 class="title">{% trans "Tahrir hayati" %}</h2>
+				<h3 class="subTitle">
+					{% trans "MEXANIKA VA TEXNOLOGIYA ILMIY JURNALINING" %}
+				</h3>
+			</div>
+			<div class="editCards">
+				<div class="card">
+					<div class="cardImg">
+						<div class="img">
+							<img src="{% static 'image/rec.webp' %}" alt="" />
+						</div>
+						<div class="link">
+							<a href="3"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#"><i class="fa-brands fa-telegram"></i></a>
+						</div>
+					</div>
+					<div class="cardtext">
+						<p>{% trans "Sh.T.Ergashev" %}</p>
+						<span>{% trans "Bosh muharrir" %}</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="cardImg">
+						<div class="img">
+							<img src="{% static 'image/rec-2.webp' %}" alt="" />
+						</div>
+						<div class="link">
+							<a href="#"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#"><i class="fa-brands fa-telegram"></i></a>
+						</div>
+					</div>
+					<div class="cardtext">
+						<p>{% trans "J.Z.Xolmirzayev" %}</p>
+						<span>{% trans "Bosh muharrir o‘rinbosari" %}</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="cardImg">
+						<div class="img">
+							<img src="{% static 'image/rec-3.webp' %}" alt="" />
+						</div>
+						<div class="link">
+							<a href="#"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="https://t.me/so12178" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+						</div>
+					</div>
+					<div class="cardtext">
+						<p>{% trans "S.K.Qo‘chqorov" %}</p>
+						<span>{% trans "Mas'ul kotib" %}</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="cardImg">
+						<div class="img">
+							<img src="{% static 'image/rec-4.webp' %}" alt="Muharrir rasm" />
+						</div>
+						<div class="link">
+							<a href="#"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#"><i class="fa-brands fa-telegram"></i></a>
+						</div>
+					</div>
+					<div class="cardtext">
+						<p>{% trans "A.Qosimov" %}</p>
+						<span>{% trans "Texnik muharrir" %}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- section editCard end -->
+{% endblock content %}

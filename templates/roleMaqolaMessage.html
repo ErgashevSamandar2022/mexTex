@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+<div class="ariza_send">
+	<div class="cards">
+		<h2>Sizga yuborilgan arizalar</h2>
+		<table class="user-table">
+			<thead>
+				<tr>
+					<th>Muallif</th>
+					<th>Sarlavha</th>
+					<th>Kategoriya</th>
+					<th>Tel number</th>
+					<th>Fayl</th>
+					<th>javob berish</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for m in yuborilgan_arizalar %}
+				<tr>
+					<td>{{ m.maqola.muallif }}</td>
+					<td>{{ m.maqola.sarlavha }}</td>
+					<td>{{ m.maqola.kategoriya }}</td>
+					<td>{{ m.maqola.telefon_raqam }}</td>
+					<td>
+						{% if m.maqola.fayl %}
+						<a href="{{ m.maqola.fayl.url }}" download class="btn btn-sm btn-success">Yuklab olish</a>
+						{% else %}
+						<span class="text-muted">Yo'q</span>
+						{% endif %}
+					</td>
+					<td>
+						{% if m.holat == None %}
+						<form method="POST" action="{% url 'maqola_javob_berish' m.id %}">
+							{% csrf_token %}
+							<button type="submit" name="javob" value="qabul">✅ Arizani qabul qilish</button>
+							<button type="submit" name="javob" value="rad">❌ Arizani rad etish</button>
+						</form>
+						{% else %}
+						<p style="color: green;">
+							Javob berildi:
+							{% if m.holat %}
+							✅ Qabul qilindi
+							{% else %}
+							❌ Rad etildi
+							{% endif %}
+						</p>
+						{% endif %}
+					</td>
+				</tr>
+				{% empty %}
+				<tr>
+					<td colspan="8" class="text-center py-4">
+						<div class="alert alert-info">
+							Hozircha hech qanday maqola yuborilmagan
+						</div>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock content %}
