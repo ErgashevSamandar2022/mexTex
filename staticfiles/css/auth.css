@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.login_container,
+.signUp_Container {
+	padding: 100px 0 2rem 0;
+	background: rgb(176, 176, 176);
+}
+.title {
+	text-align: center;
+	margin: 1.5rem 0 1rem;
+	color: crimson;
+}
+.createBtn {
+	background: green;
+}
+
+.login_container {
+	width: 100%;
+}
+.login_container p {
+	margin-bottom: 1rem;
+}
+.login_container a {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	background: green;
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+	margin-right: 1rem;
+}
+
+form {
+	max-width: 500px;
+	margin: auto;
+}
+select {
+	width: 100%;
+	background-color: #f9f9f9;
+	font-weight: 500;
+	color: #333;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+label {
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	display: block;
+	color: #333;
+}
+input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+ul {
+	list-style: none;
+	color: red;
+}
+div {
+	color: red;
+}
+
+button {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.55rem 1.1rem;
+	border: 0;
+	outline: 0;
+	background: green;
+	color: #fff;
+	border-radius: 5px;
+	margin: 1rem auto;
+}

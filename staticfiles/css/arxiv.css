@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rochester&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.section_header_arxiv {
+	width: 100%;
+	min-height: 100vh;
+	padding: 2rem 0;
+	text-align: center;
+	background: url(../image/arxiv_header.webp) no-repeat center/cover;
+}
+.section_header_arxiv .header {
+	min-height: calc(100vh - 4rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.3rem;
+	color: rgb(85, 252, 2);
+}
+
+.section_arxiv {
+	padding: 3rem 0;
+	width: 100% !important;
+	/* background: #123; */
+	background: linear-gradient(
+		45deg,
+		rgba(40, 113, 228, 1) 0%,
+		rgba(23, 255, 167, 1) 100%
+	);
+}
+.section_arxiv .arxivTable {
+	max-width: 1440px;
+	width: 100%;
+	margin-top: 2rem;
+	overflow-x: auto !important;
+	white-space: nowrap;
+}
+
+.section_arxiv .arxivTable table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.section_arxiv .arxivTable table,
+.section_arxiv .arxivTable th,
+.section_arxiv .arxivTable td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 10px;
+}
+.section_arxiv table tr th {
+	font-size: 1.5rem;
+}
+.section_arxiv table .tr td {
+	text-align: center;
+	margin: 0 auto;
+	font-size: 1.2rem;
+}
+
+/* arxiv */
+.arxivCards {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	/* align-items: center; */
+	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+.arxivCards .card {
+	/* text-align: center; */
+	width: 270px;
+	background: #123;
+	padding: 1.5rem 1.2rem;
+	border-radius: 0 20px;
+	color: #fff;
+}
+.arxivCards .card .arxivYear {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.arxivList_items {
+	list-style: none;
+}
+.arxivList_item {
+	margin-bottom: 1rem;
+}
+.arxivList_item p {
+	padding: 3px 0;
+}
+.arxivList_item p span {
+	color: gray;
+	font-size: 1.1rem;
+}
+.arxivList_item p a {
+	text-decoration: none;
+	color: blue;
+}
+@media screen and (max-width: 992px) {
+	.section_header_arxiv .header {
+		font-size: 3rem;
+	}
+
+	.section_arxiv table {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.section_header_arxiv .header {
+		font-size: 2.5rem;
+	}
+
+	.section_arxiv table tr th {
+		font-size: 1.1rem;
+	}
+	.section_arxiv table .tr td {
+		font-size: 0.8rem;
+	}
+}
+@media screen and (max-width: 576px) {
+	.section_header_arxiv .header {
+		font-size: 2.2rem;
+	}
+}
+@media screen and (max-width: 390px) {
+	.section_header_arxiv .header {
+		font-size: 1.5rem;
+	}
+}
+@media screen and (max-width: 300px) {
+	.section_header_arxiv .header {
+		font-size: 1.3rem;
+	}
+}

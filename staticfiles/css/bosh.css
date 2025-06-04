@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rochester&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.sectionHeader {
+	width: 100%;
+	background: url(../image/header1.webp) no-repeat center/cover;
+	min-height: 100vh;
+	padding: 2rem 0;
+}
+.header {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	font-family: Quicksand;
+	padding: 80px 0;
+}
+.header .headerText {
+	width: 70%;
+}
+.header .headerText .subTitle {
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+.header .headerText .title {
+	font-size: 3.5rem;
+	margin: 1rem 0;
+	color: crimson;
+}
+.header .headerText .lastTitle {
+	font-size: 1.1rem;
+	font-weight: 600;
+	/* color: rgb(34, 34, 34); */
+	color: #fff;
+	line-height: 27px;
+}
+.header .headerText button {
+	width: 130px;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background: green;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.auth_container {
+	position: relative;
+	text-align: center;
+}
+.auth_container .userDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-transform: uppercase;
+	color: chocolate;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.userBtnExit {
+	font-size: 1rem;
+	cursor: pointer;
+	position: relative;
+	margin-right: 5px;
+}
+.auth_container .ls a {
+	text-decoration: none;
+	padding: 0.5rem 1.2rem;
+	background: green;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-left: 5px;
+	font-family: Quicksand;
+}
+.exit {
+	width: 180px;
+	position: fixed;
+	right: 0;
+	/* transform: translate(30%, 0); */
+	top: 80px;
+	background: #123;
+	margin: 0rem auto;
+	padding: 20px;
+}
+.admin123-div {
+	margin-bottom: 10px;
+	border-radius: 5px;
+	/* border: 1px solid white; */
+	background-color: green;
+	display: flex;
+	justify-content: center;
+}
+.exit .admin .admin123-div a {
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem 0;
+	width: 100%;
+	text-align: center;
+}
+.exit .admin .admin123-div a p {
+	width: 0;
+}
+.exit.bnone {
+	display: none;
+}
+
+.messageRegular {
+	font-size: 1.5rem;
+	margin-left: 8px;
+}
+.messageRegular a {
+	text-decoration: none;
+	color: #0056b3;
+}
+
+.languageCard select {
+	padding: 8px 12px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+	background-color: white;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	/* margin-top: -10px; */
+}
+
+.languageCard select:hover {
+	border-color: #007bff;
+	background-color: #f8f9fa;
+}
+
+.languageCard select:focus {
+	outline: none;
+	border-color: #0056b3;
+}
+
+/* styling journal start */
+.sectionJournal {
+	width: 100%;
+	padding: 3rem 0;
+	/* background: #123; */
+	background: linear-gradient(
+		135deg,
+		rgba(40, 113, 228, 1) 0%,
+		rgba(23, 255, 167, 1) 100%
+	);
+}
+.journal {
+	width: 100%;
+	padding: 1rem 0;
+}
+.journal .journalCards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+.journal .journalCard {
+	background: #fff;
+	padding: 2rem;
+	border-radius: 10px;
+	opacity: 0.5;
+	transition: opasity 0.5s ease;
+}
+.journal .journalCard:hover {
+	opacity: 1;
+	box-shadow: 2px 2px 20px 5px gray;
+}
+.journal .journalCard .image {
+	width: 100px;
+	height: 100px;
+	margin: 1rem auto;
+}
+.journal .journalCard .image img {
+	width: 100%;
+}
+.journal .journalCard .text {
+	font-size: 1rem;
+	color: #110;
+	letter-spacing: 1px;
+}
+/* styling journal end */
+
+/* styling language start */
+.sectionLanguage {
+	padding: 3rem 0;
+	width: 100%;
+	background: url(../image/3jpg.webp) no-repeat center/cover;
+	position: relative;
+	z-index: -1;
+}
+.sectionLanguage::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 0;
+}
+.language {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	padding: 2rem 0;
+}
+.language .languagetext {
+	width: 48%;
+}
+.language .languagetext .title {
+	font-size: 2.5rem;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+.language .languagetext .languageCard {
+	display: flex;
+	gap: 2.5rem;
+	margin-bottom: 3rem;
+}
+.language .languagetext .languageCard .num {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	align-content: center;
+	font-size: 1.1rem;
+	color: #fff;
+	background: coral;
+}
+.language .languagetext .languageCard .text {
+	color: #fff;
+}
+.language .languagetext .languageCard .text p {
+	font-size: 1.3rem;
+	margin-bottom: 0.7rem;
+}
+.language .languageImage {
+	width: 50%;
+}
+.language .languageImage img {
+	width: 100%;
+}
+/* styling language end */
+
+/* journalElektron styling start */
+.sectionJournalElektron {
+	padding: 3rem 0;
+	width: 100%;
+	/* background: #123; */
+	background: linear-gradient(
+		45deg,
+		rgba(40, 113, 228, 1) 0%,
+		rgba(23, 255, 167, 1) 100%
+	);
+}
+.journalElektronCards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	gap: 2rem;
+}
+.journalElektronCards .journalElektronCard {
+	width: 250px;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.journalElektronCard .image {
+	width: 250px;
+	height: 350px;
+	object-fit: cover;
+	align-content: center;
+}
+.journalElektronCard .image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.journalElektronCard .text {
+	width: 250px;
+	height: calc(100% - 350px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 10px 10px 1.5rem 10px;
+	color: #123;
+	background: gray;
+}
+.journalElektronCard .text .jNum {
+	padding: 0.7rem 1.4rem;
+	background: chocolate;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+.journalElektronCard .text .data {
+	display: flex;
+	color: #fff;
+}
+.journalElektronCard .text i {
+	margin-right: 5px;
+}
+.journalElektronCard .text .title {
+	font-size: 1.3rem;
+	color: crimson;
+	margin: 0.5rem 0 1rem;
+}
+.journalElektronCard .text .download {
+	text-decoration: none;
+	background: green;
+	padding: 0.8rem 1.3rem;
+	color: #fff;
+	border-radius: 5px;
+}
+.journalElektronBtn {
+	margin: 3rem 0 1rem;
+	text-align: center;
+}
+.journalElektronBtn a {
+	padding: 0.7rem 3rem;
+	text-decoration: none;
+	background: green;
+	color: #fff;
+	font-size: 1.1rem;
+	letter-spacing: 2px;
+	border-radius: 30px;
+}
+/* journalElektron styling end */
+
+/* count styling start */
+.sectionCount {
+	width: 100%;
+	background: url(../image/bg1.webp) no-repeat top/cover;
+	padding: 3rem 0;
+	position: relative;
+}
+.sectionCount::after {
+	content: '';
+	background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+}
+.countCards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	min-height: 150px;
+	align-items: center;
+	position: relative;
+	color: #fff;
+	z-index: 20;
+}
+.countCards .countCard {
+	width: 200px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.countCards .countCard i {
+	font-size: 3.5rem;
+}
+.countCards .countCard div h2 {
+	font-size: 2rem;
+	color: chocolate;
+}
+.countCards .countCard div p {
+	font-size: 1.2rem;
+}
+/* count styling end */
+
+/* ourEvents styling start */
+/* ourEvents styling end */
+
+/* galareya stylin start */
+.sectionGalareya {
+	width: 100%;
+}
+.galareya {
+	display: flex;
+	justify-content: start;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.galareya .card {
+	width: 12.5%;
+	object-fit: cover;
+}
+.galareya .card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* galareya stylin end */
+
+@media screen and (max-width: 992px) {
+	.header .headerText {
+		width: 100%;
+	}
+	.header .headerText .title {
+		font-size: 3rem;
+	}
+
+	/* journal */
+	.journal .journalCards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* ----------- */
+	.language {
+		flex-direction: column;
+	}
+	.language .languagetext {
+		width: 100%;
+	}
+	.language .languageImage {
+		width: 100%;
+	}
+
+	/* ------------------ */
+	.galareya .card {
+		width: 25%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.header .headerText .subTitle {
+		font-size: 1.3rem;
+	}
+	.header .headerText .title {
+		font-size: 2.6rem;
+	}
+
+	/* journal */
+	.journal .journalCards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* ----------------------- */
+	.language .languagetext .title {
+		font-size: 1.9rem;
+	}
+
+	/* -------------------------------- */
+	.auth_container .ls a {
+		text-decoration: none;
+		padding: 0.4rem 0.9rem;
+		font-size: 0.7rem;
+	}
+	.auth_container .ls {
+		padding: 0.4rem 0rem;
+		font-size: 0.7rem;
+	}
+	.messageRegular {
+		font-size: 1.1rem;
+	}
+	.languageCard {
+		display: flex;
+		align-items: center;
+	}
+	.languageCard select {
+		padding: 5px 7px;
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.header .headerText .subTitle {
+		font-size: 1rem;
+	}
+	.header .headerText .title {
+		font-size: 2.4rem;
+		text-align: center;
+	}
+	.header .headerText .lastTitle {
+		font-size: 0.9rem;
+		text-align: justify;
+	}
+
+	/* ----------------------- */
+	.language .languagetext .title {
+		font-size: 1.5rem;
+	}
+	.language .languagetext .languageCard {
+		gap: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.language .languagetext .languageCard .text p {
+		font-size: 1rem;
+	}
+	.language .languagetext .languageCard .text span {
+		font-size: 0.8rem;
+	}
+
+	/* ----------------------- */
+	.countCards .countCard {
+		width: 130px;
+	}
+	.countCards .countCard i {
+		font-size: 2.2rem;
+	}
+	.countCards .countCard div h2 {
+		font-size: 1.2rem;
+		color: chocolate;
+	}
+	.countCards .countCard div p {
+		font-size: 0.7rem;
+	}
+
+	/* ------------------ */
+	.galareya .card {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 390px) {
+	.header .headerText .title {
+		font-size: 2rem;
+	}
+	/* journal */
+	.journal .journalCards {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	/* ----------------------------- */
+	.ourEvents .ourCards .ourCard .cardText h3 {
+		font-size: 1.2rem;
+	}
+}
+@media screen and (max-width: 300px) {
+	header .headerText .subTitle {
+		font-size: 0.8rem;
+	}
+	.header .headerText .title {
+		font-size: 1.8rem;
+	}
+	.header .headerText .lastTitle {
+		font-size: 0.7rem;
+	}
+
+	/* ------------------ */
+	.galareya .card {
+		width: 100%;
+	}
+}

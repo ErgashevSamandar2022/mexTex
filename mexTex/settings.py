@@ -1,20 +1,23 @@
 import os
+from dotenv import load_dotenv
+import dj_database_url
 from pathlib import Path
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n2vem@^knljk9jdie@zan5tqezp@h!j0(tr0qp5(alc&us!^w^'
+SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-key-agar-env-topilmasa')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['.onrender.com','127.0.0.1','localhost']
+
 
 
 # Application definition
@@ -67,15 +70,26 @@ WSGI_APPLICATION = 'mexTex.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'mexTex',  # Siz yaratgan DB nomi
+#         'USER': 'postgres',  # Standart foydalanuvchi
+#         'PASSWORD': 'sammi2725',  # O'rnatish paytida bergan parol
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(BASE_DIR, '.env'))
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mexTex',  # Siz yaratgan DB nomi
-        'USER': 'postgres',  # Standart foydalanuvchi
-        'PASSWORD': 'sammi2725',  # O'rnatish paytida bergan parol
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
 
 
@@ -129,6 +143,7 @@ LOCALE_PATHS = [
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -138,7 +153,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # media file
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 
 AUTH_USER_MODEL = 'accounts.CustomUser'

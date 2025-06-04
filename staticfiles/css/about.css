@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rochester&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.section_header {
+	width: 100%;
+	background: url(../image/header3.webp) no-repeat center/cover;
+	min-height: 100vh;
+	padding: 2rem 0;
+}
+
+/* about styling start */
+.section_about {
+	background: linear-gradient(
+		135deg,
+		rgba(40, 113, 228, 1) 0%,
+		rgba(23, 255, 167, 1) 100%
+	);
+	padding: 3rem 0;
+}
+.aboutCards {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem 0;
+}
+.aboutCards .aboutCard {
+	width: 45%;
+}
+.aboutCards .aboutCard img {
+	width: 100%;
+	height: 100%;
+}
+.about .aboutAccardion {
+	width: 80%;
+	margin: 0 auto;
+}
+.about .aboutAccardion .accardionCard {
+	margin-bottom: 1rem;
+}
+.about .aboutAccardion .accardionCard .accardion {
+	background-color: #ccc;
+	color: black;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.2rem;
+}
+.about .aboutAccardion .accardionCard .accardion p {
+	display: flex;
+	align-items: center;
+}
+.about .aboutAccardion .accardionCard .accardion p span {
+	margin-right: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 30px;
+	min-height: 30px;
+	background: black;
+	color: #fff;
+	border-radius: 50%;
+}
+.about .aboutAccardion .accardionCard .panel {
+	margin-bottom: 1rem;
+	background: #fff;
+	padding: 1.5rem 1rem;
+	font-size: 1rem;
+	font-family: Quicksand;
+	font-weight: 500;
+}
+.aboutBlock {
+	display: block;
+}
+.aboutNone {
+	display: none;
+}
+
+.section_rec {
+	padding: 3rem 0;
+	background: #484848;
+}
+.recCards {
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	gap: 4rem;
+}
+.recCards .recImage img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.recCards .recText p {
+	font-size: 1.4rem;
+	color: #fff;
+	letter-spacing: 0.5px;
+	font-family: Quiksand;
+}
+.recCards .recText .title {
+	font-size: 1.5rem;
+	margin: 0.8rem 0;
+	color: chartreuse;
+	text-transform: uppercase;
+}
+.recCards .recText .lavozim {
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+/* about styling end */
+
+/* edit stayling start */
+.section_edit {
+	background: linear-gradient(
+		135deg,
+		rgba(40, 113, 228, 1) 0%,
+		rgba(23, 255, 167, 1) 100%
+	);
+	padding: 3rem 0;
+}
+.editCards {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin: 3rem 0;
+}
+.editCards .card {
+	position: relative;
+}
+.editCards .card .cardImg {
+	width: 200px;
+	height: 250px;
+}
+.editCards .card .cardImg .img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	object-fit: cover;
+}
+.editCards .card .cardImg .img img {
+	width: 100%;
+}
+.editCards .card .cardImg .link {
+	text-align: center;
+	margin: 0.8rem 0;
+	font-size: 1.6rem;
+}
+.editCards .card .cardImg .link a {
+	text-decoration: none;
+}
+.editCards .card .cardImg .link a i {
+	margin-left: 5px;
+	opacity: 0.5;
+	transition: all 0.5s ease;
+}
+.editCards .card .cardImg .link i:nth-child(1) {
+	color: #0f13f7;
+}
+.editCards .card .cardImg .link i:nth-child(2) {
+	color: rgb(1, 1, 136);
+}
+.editCards .card .cardImg .link i:nth-child(3) {
+	color: rgb(0, 8, 255);
+}
+.editCards .card .cardImg .link i:hover {
+	opacity: 1;
+}
+.editCards .card .cardtext {
+	text-align: center;
+}
+.editCards .card .cardtext p {
+	font-size: 1.5rem;
+	color: #fff;
+	margin-bottom: 0.5rem;
+}
+.editCards .card .cardtext span {
+	font-size: 0.9rem;
+	color: #123;
+}
+/* edit stayling end */
+
+@media screen and (max-width: 992px) {
+	.recCards {
+		width: 100%;
+	}
+	.recCards .recText p {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (max-width: 768px) {
+	.about .aboutAccardion {
+		width: 100%;
+	}
+	.recCards {
+		flex-direction: column;
+		text-align: center;
+		gap: 1.5rem;
+	}
+	.recCards .recText p {
+		font-size: 1.1.5rem;
+	}
+}
+@media screen and (max-width: 576px) {
+	.aboutCards {
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.aboutCards .aboutCard {
+		width: 100%;
+	}
+
+	.about .aboutAccardion .accardionCard .accardion {
+		font-size: 0.9rem;
+	}
+	.about .aboutAccardion .accardionCard .panel {
+		font-size: 0.8rem;
+	}
+
+	/* -------------------------- */
+	.recCards .recText p {
+		font-size: 1rem;
+	}
+	.recCards .recText .title {
+		font-size: 1.2rem;
+	}
+	.recCards .recText .lavozim {
+		font-size: 0.9rem;
+	}
+}
+@media screen and (max-width: 390px) {
+	/* -------------------------- */
+	.recCards .recText p {
+		font-size: 0.9rem;
+	}
+}
+@media screen and (max-width: 300px) {
+}
